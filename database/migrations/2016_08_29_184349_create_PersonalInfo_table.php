@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonalInfoTable extends Migration
+class CreatepersonalInfoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,12 +20,12 @@ class CreatePersonalInfoTable extends Migration
             ->on('students');
 
             $personalInfo->date('DOB');
-            $personalInfo->string('parents');
-            $personalInfo->integer('SAT');
-            $personalInfo->integer('ACT');
-            $personalInfo->integer('TOEFL');
-            $personalInfo->integer('GPA');
-            $personalInfo->string('major');
+            $personalInfo->string('parents')->nullable();
+            $personalInfo->integer('SAT')->nullable();
+            $personalInfo->integer('ACT')->nullable();
+            $personalInfo->integer('TOEFL')->nullable();
+            $personalInfo->integer('GPA')->nullable();
+            $personalInfo->string('major')->nullable();
 
         });
     }

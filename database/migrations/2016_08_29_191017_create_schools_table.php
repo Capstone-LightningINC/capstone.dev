@@ -17,10 +17,10 @@ class CreateSchoolsTable extends Migration
             $schools->string('name');
             $schools->string('location');
             $schools->string('region');
-            $schools->string('phone', 11);
-            $schools->string('rank', 4);
+            $schools->string('phone');
+            $schools->integer('rank');
             $schools->string('ratio');
-            $schools->int('acceptance_rate', 3);
+            $schools->float('acceptance_rate');
             $schools->string('URL')->unique();
             $schools->timestamps();
         });
