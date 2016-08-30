@@ -9,14 +9,11 @@
 </header>
 <div class="container">
     @include('partials.sidebar')
-    <div id="main" class="row">
 
-        @yield('content')
-        @if (session()->has('message'))
-            <div class="alert alert-success">{{ session('successMessage') }}</div>
-        @endif
-    </div>
+    @yield('content')
 
 </div>
+
+@include('partials.scripts')
 </body>
 </html>

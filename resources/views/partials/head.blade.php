@@ -1,4 +1,3 @@
-<head>
 
     <!-- start: Meta -->
     <meta charset="utf-8">
@@ -18,6 +17,7 @@
     <link id="base-style" href="css/style.css" rel="stylesheet">
     <link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="css/custom.css" rel="stylesheet">
     <!-- end: CSS -->
 
 
@@ -34,8 +34,3 @@
     <!-- start: Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- end: Favicon -->
-
-
-
-
-</head>
