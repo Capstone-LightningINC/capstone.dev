@@ -13,13 +13,16 @@ class CreateApplicationTable extends Migration
     public function up()
     {
       Schema::create('application', function(Blueprint $application) {
+              $application->increments('id');
+              $application->integer('school_id')->unsigned();
               $application->foreign('school_id')
-              ->references('id')
+              ->references('school_id')
               ->on('schools');
 
+              $application->integer('student_id')->unsigned();
               $application->foreign('student_id')
-              ->references('id')
-              ->on('student');
+              ->references('user_id')
+              ->on('users');
 
           });
     }
