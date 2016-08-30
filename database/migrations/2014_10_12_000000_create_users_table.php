@@ -18,11 +18,11 @@ class CreateUsersTable extends Migration
             $user->string('preferred_name');
             $user->boolean('gender');
             $user->string('email')->unique();
-            $user->string('password', 30);
-            $user->int('phone', 11);
+            $user->string('password', 15);
+            $user->string('phone', 11);
             $user->string('WeChat')->unique();
             $user->enum('authority', ['student', 'counselor', 'parent', 'manager', 'assistant']);
-            $user->('company_id');
+            $user->smallinteger('company_id')->unsigned();
             $user->rememberToken();
             $user->timestamps();
         });
