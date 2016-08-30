@@ -5,10 +5,9 @@
 </head>
 <body>
 <header class="row">
-    @include('partials.header1')
+    @include('partials.header2')
 </header>
 <div class="container">
-    @include('partials.sidebar')
 
     @yield('content')
 
