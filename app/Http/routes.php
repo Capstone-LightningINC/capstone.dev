@@ -11,6 +11,9 @@
 |
 */
 
+<<<<<<< HEAD
+Route::get('/', 'HomeController@index');
+=======
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,3 +27,4 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+>>>>>>> 8779a19b42e9fbf5b89358418e5ff2e819c5ffd1
