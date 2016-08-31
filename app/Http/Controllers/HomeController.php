@@ -23,6 +23,15 @@ class HomeController extends Controller
     public function myStudents(){
         return view('schools.myStudents');
     }
+    public function profile(){
+        return view('auth.profile');
+    }
+    public function search(){
+        return view('schools.search');
+    }
+    public function activities(){
+        return view('schools.activities');
+    }
 
 
 }
