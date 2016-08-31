@@ -303,7 +303,7 @@ h6 {
 
 .navbar-inner {
 	margin-bottom: 0px;
-  	min-height: 70px;
+  	min-height: 40px;
   	padding-right: 20px;
   	padding-left: 20px;
 	background: #080808;
@@ -3004,8 +3004,4 @@ ul.messagesList li span.date {
 }
 .navbar .brand{
 	font-size: 35px;
-}
-
-#navbarCustom {
-	margin-top: 1%;
 }

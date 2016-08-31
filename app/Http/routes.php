@@ -13,6 +13,9 @@
 
 
 Route::get('/', 'HomeController@index');
+Route::get('/student', 'HomeController@studentProfile');
+Route::get('/counselor', 'HomeController@counselor');
+
 
 //Route::get('/', function () {
 //    return view('welcome');
