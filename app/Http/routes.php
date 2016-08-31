@@ -12,9 +12,16 @@
 */
 
 
-Route::get('/', 'HomeController@index');
+
 Route::get('/student', 'HomeController@studentProfile');
 Route::get('/counselor', 'HomeController@counselor');
+
+
+Route::get('/counselor/myStudents', 'HomeController@myStudents');
+Route::get('/student/mySchools', 'HomeController@mySchools');
+Route::get('/auth/login', 'HomeController@login');
+Route::post('/auth/login', 'HomeController@login');
+Route::get('/auth/register', 'HomeController@register');
 
 
 //Route::get('/', function () {
@@ -22,11 +29,13 @@ Route::get('/counselor', 'HomeController@counselor');
 //});
 //Route::get('/profile/{id}', 'UsersController@show');
 //
+// Route::get('/counselor/{user_id}/dashboard', 'User\UsersController@showCounselor');
+// Route::get('/student/{user_id}/dashboard', 'User\UsersController@showStudent');
 //// Authentication routes...
-//Route::get('auth/login', 'Auth\AuthController@getLogin');
-//Route::post('auth/login', 'Auth\AuthController@postLogin');
-//Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// Route::get('auth/login', 'Auth\AuthController@getLogin');
+// Route::post('auth/login', 'Auth\AuthController@postLogin');
+// Route::get('auth/logout', 'Auth\AuthController@getLogout');
 //
 //// Registration routes...
-//Route::get('auth/register', 'Auth\AuthController@getRegister');
-//Route::post('auth/register', 'Auth\AuthController@postRegister');
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Route::post('auth/register', 'Auth\AuthController@postRegister');
