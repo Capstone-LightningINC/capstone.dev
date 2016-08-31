@@ -3068,3 +3068,27 @@ div.register {
 button.btn.btn-success.register {
 	margin-top: 15px;
 }
+.schoolbox {
+    background-color:#ffffff;
+	padding:10px;
+	margin:5px 0;
+    border: 1px solid #cfcfcf;
+    -moz-box-shadow: 2px 2px 4px 0px #cfcfcf;
+    -webkit-box-shadow: 2px 2px 4px 0px #cfcfcf;
+    -o-box-shadow: 2px 2px 4px 0px #cfcfcf;
+    box-shadow: 2px 2px 4px 0px #cfcfcf;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=134, Strength=4);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schooltitle {
+    font-weight:bold;
+    font-size:1.2em;
+	padding:5px 0 5px 0;
+}
+
+.schooltext {
+    
+}
