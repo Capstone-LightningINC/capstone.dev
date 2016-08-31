@@ -3044,7 +3044,7 @@ div.row.welcome {
 	color: #FFF;
 	
 }
-body {
+body.welcome {
 	background:  
 	linear-gradient(
       rgba(0, 0, 0, 0.5), 
@@ -3054,4 +3054,17 @@ body {
 	background-size: cover;
 	max-width: 100%;
 	height: auto; 
+}
+div.register {
+	border: 1px solid black;
+	margin-top: 50px;
+	margin-bottom: 20px;
+    box-shadow: 0 0 10px black;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+}
+button.btn.btn-success.register {
+	margin-top: 15px;
 }
