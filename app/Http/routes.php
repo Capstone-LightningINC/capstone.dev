@@ -12,12 +12,17 @@
 */
 
 
-Route::get('/', 'HomeController@index');
+
+Route::get('/student', 'HomeController@studentProfile');
+Route::get('/counselor', 'HomeController@counselor');
+
+
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
 Route::get('/student/mySchools', 'HomeController@mySchools');
 Route::get('/auth/login', 'HomeController@login');
 Route::post('/auth/login', 'HomeController@login');
 Route::get('/auth/register', 'HomeController@register');
+
 
 //Route::get('/', function () {
 //    return view('welcome');
