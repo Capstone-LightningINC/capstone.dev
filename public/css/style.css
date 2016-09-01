@@ -303,7 +303,7 @@ h6 {
 
 .navbar-inner {
 	margin-bottom: 0px;
-  	min-height: 70px;
+  	min-height: 40px;
   	padding-right: 20px;
   	padding-left: 20px;
 	background: #080808;
@@ -3003,6 +3003,7 @@ ul.messagesList li span.date {
 	padding: 2px 5px;
 }
 .navbar .brand{
+
 	font-size: 2em;
 }
 
@@ -3090,6 +3091,7 @@ button.btn.btn-success.register {
 }
 
 .schooltext {
+<<<<<<< HEAD
     
 }
 
@@ -3108,3 +3110,7 @@ textarea#textarea2.cleditor {
 div.row.search {
 	margin: 0 auto 20px auto;
 }
+=======
+
+}
+>>>>>>> 4cd894c1530b98ebe811dd068ae9d6a47e293950

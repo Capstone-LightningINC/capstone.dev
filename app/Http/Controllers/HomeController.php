@@ -11,6 +11,14 @@ class HomeController extends Controller
     public function index(){
         return view('home');
     }
+
+    public function studentProfile(){
+        return view('users.student');
+    }
+    public function counselorProfile(){
+        return view('users.counselor');
+    }
+
     public function login(){
         return view('auth.login');
     }
@@ -32,6 +40,7 @@ class HomeController extends Controller
     public function activities(){
         return view('schools.activities');
     }
+
 
 
 }

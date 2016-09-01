@@ -14,27 +14,25 @@ class CreateSchoolsTable extends Migration
     {
         Schema::create('schools', function (Blueprint $schools) {
             $schools->increments('school_id');
-            $schools->string('name')->unique();
-            $schools->string('info');
-            $schools->string('city');
-            $schools->string('state');
-            $schools->integer('zip');
-            $schools->string('country');
-            $schools->string('timezone');
-            $schools->string('region')->default('N/A');
-            $schools->string('phone');
-            $schools->string('email')->unique();
-            $schools->string('fax');
-
-            $schools->string('type');
-            $schools->string('years');
-            $schools->integer('tuition');
-            $schools->string('setting');
-            $schools->boolean('housing');
+            $schools->string('biz_name');
+            $schools->string('biz_info');
+            $schools->string('e_address');
+            $schools->string('e_city');
+            $schools->string('e_state');
+            $schools->integer('e_postal');
+            $schools->string('e_country');
+            $schools->string('loc_TZ');
+            $schools->string('biz_phone');
+            $schools->string('biz_fax');
+            $schools->string('biz_email');
+            $schools->string('web_url');
+            $schools->string('c_type');
+            $schools->string('c_setting');
+            $schools->boolean('c_housing');
+            $schools->integer('c_pop');
+            $schools->string('c_ratio');
             $schools->integer('rank')->nullable();
-            $schools->string('ratio');
             $schools->float('acceptance_rate')->nullable();
-            $schools->string('URL')->unique();
             $schools->timestamps();
         });
     }
