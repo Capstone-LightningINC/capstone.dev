@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $user->boolean('gender');
             $user->string('email')->unique();
             $user->string('password', 15);
-            $user->string('phone', 11);
+            $user->string('phone');
             $user->string('WeChat')->unique();
             $user->enum('authority', ['student', 'counselor', 'parent', 'manager', 'assistant']);
             $user->smallinteger('company_id')->unsigned();
