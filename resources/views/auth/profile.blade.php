@@ -37,8 +37,8 @@
 				  <label class="control-label" for="typeahead">Gender</label>
 				  <div class="controls">
 					<form>
-					  <input type="radio" name="gender" value="male"> Male<br>
-					  <input type="radio" name="gender" value="female"> Female<br>
+					  <input type="radio" name="gender" value="0"> Male<br>
+					  <input type="radio" name="gender" value="1"> Female<br>
 					</form>
 				  </div>
 				</div>
