@@ -19,9 +19,13 @@ Route::get('/counselor', 'HomeController@counselor');
 
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
 Route::get('/student/mySchools', 'HomeController@mySchools');
+Route::get('/student/activities', 'HomeController@activities');
+Route::get('/schools/search', 'HomeController@search');
+
 Route::get('/auth/login', 'HomeController@login');
 Route::post('/auth/login', 'HomeController@login');
 Route::get('/auth/register', 'HomeController@register');
+Route::get('/auth/profile', 'HomeController@profile');
 
 
 //Route::get('/', function () {

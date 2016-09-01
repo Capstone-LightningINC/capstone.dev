@@ -3091,5 +3091,26 @@ button.btn.btn-success.register {
 }
 
 .schooltext {
+<<<<<<< HEAD
+    
+}
+
+div.row-fluid.sortable.activities {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 70%;
+	overflow-y: auto;
+}
+textarea#textarea2.cleditor {
+	width: 45%;
+	overflow: scroll;
+}
+div.row.search {
+	margin: 0 auto 20px auto;
+}
+=======
 
 }
+>>>>>>> 4cd894c1530b98ebe811dd068ae9d6a47e293950
