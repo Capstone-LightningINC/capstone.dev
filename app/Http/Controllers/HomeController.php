@@ -12,26 +12,43 @@ class HomeController extends Controller
         return view('home');
     }
 
+
+        //    DASHBOARDS   //
     public function studentProfile(){
-        return view('users.student');
+        return view('dashboards.student');
     }
     public function counselorProfile(){
-        return view('users.counselor');
+        return view('dashboards.counselor');
     }
 
+
+         //    AUTHORIZE   //
     public function login(){
         return view('auth.login');
     }
     public function register(){
         return view('auth.registration');
     }
+
+
+            //    SCHOOLS   //
     public function mySchools(){
         return view('schools.mySchools');
     }
+
+
+            //    TASKS   //
     public function myStudents(){
-        return view('schools.myStudents');
+        return view('tasks.myStudents');
     }
-
-
+    public function studentTasks(){
+        return view('tasks.studentTasks');
+    }
+    public function writeAnEssay(){
+        return view('tasks.writeAnEssay');
+    }
+    public function myEssays(){
+        return view('tasks.myEssays');
+    }
 
 }

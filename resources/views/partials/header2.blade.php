@@ -13,7 +13,7 @@
             <div class="nav-no-collapse header-nav">
                 <ul class="nav pull-right">
                     <li>
-                        <a class="brand" href="#"><span>Login</span></a>
+                        <a class="brand" href="/auth/login"><span>Login</span></a>
                     </li>
                 </ul>
 

@@ -12,16 +12,29 @@
 */
 
 
-
+//    DASHBOARDS   //
 Route::get('/student', 'HomeController@studentProfile');
 Route::get('/counselor', 'HomeController@counselor');
 
-
-Route::get('/counselor/myStudents', 'HomeController@myStudents');
-Route::get('/student/mySchools', 'HomeController@mySchools');
+//    AUTHORIZE   //
 Route::get('/auth/login', 'HomeController@login');
 Route::post('/auth/login', 'HomeController@login');
 Route::get('/auth/register', 'HomeController@register');
+
+
+//    SCHOOLS   //
+Route::get('/student/mySchools', 'HomeController@mySchools');
+
+
+//    TASKS   //
+Route::get('/counselor/myStudents', 'HomeController@myStudents');
+Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
+Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
+Route::get('/student/myEssays', 'HomeController@myEssays');
+
+
+
+
 
 
 //Route::get('/', function () {
