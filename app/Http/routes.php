@@ -13,34 +13,36 @@
 
 
 //    DASHBOARDS   //
+Route::get('/', 'HomeController@index');
 Route::get('/student', 'HomeController@studentProfile');
 Route::get('/counselor', 'HomeController@counselor');
+Route::get('/auth/profile', 'HomeController@profile');
+Route::get('/counselor/myStudents', 'HomeController@myStudents');
 
 
 //    AUTHORIZE   //
 
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('/counselor/myStudents', 'HomeController@myStudents');
-Route::get('/student/mySchools', 'HomeController@mySchools');
-Route::get('/student/activities', 'HomeController@activities');
-Route::get('/schools/search', 'HomeController@search');
+//    REGISTER   //
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-
-Route::get('/auth/login', 'HomeController@login');
-Route::post('/auth/login', 'HomeController@login');
-Route::get('/auth/register', 'HomeController@register');
-Route::get('/auth/profile', 'HomeController@profile');
 
 
 //    SCHOOLS   //
 Route::get('/student/mySchools', 'HomeController@mySchools');
-
+Route::get('/schools/search', 'HomeController@search');
 
 //    TASKS   //
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
 Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
 Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
 Route::get('/student/myEssays', 'HomeController@myEssays');
+Route::get('/student/activities', 'HomeController@activities');
+
 
 
 

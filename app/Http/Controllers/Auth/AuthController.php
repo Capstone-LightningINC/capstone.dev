@@ -22,7 +22,8 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
+    protected $redirectAfterLogout = '/';
+    protected $redirectTo = '/auth/profile';
     /**
      * Create a new authentication controller instance.
      *
@@ -32,7 +33,6 @@ class AuthController extends Controller
     {
         $this->middleware('guest', ['except' => 'getLogout']);
     }
-    protected $redirectAfterLogout = '/';
 
     /**
      * Get a validator for an incoming registration request.
@@ -61,6 +61,11 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'phone' => $data['phone'],
+            'company' => $data['company'],
+            'counselor_name' => $data['counselor_name'],
+            'preferred_name' => $data['preferred_name']
         ]);
     }
+
 }
