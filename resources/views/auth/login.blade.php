@@ -1,7 +1,8 @@
 @extends("layouts.register")
 @section('content')
 
-  <form method="post" action="{{ action('Auth\AuthController@postLogin') }}">
+<div class="register">
+  <form class="form-horizontal" method="post" action="{{ action('Auth\AuthController@postLogin') }}">
 	{{ csrf_field() }}
 	<div class= "form-group">
 		<label for="email">Email</label>
@@ -27,6 +28,6 @@
 	</div>
 	<button type="submit" class="btn btn-info">Login</button>
   </form>
-
+</div>
 
 @stop

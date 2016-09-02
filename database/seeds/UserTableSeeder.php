@@ -13,9 +13,9 @@ class UserTableSeeder extends Seeder
     {
 
     	factory(App\User::class, 10)->create();
-    	factory(App\User::class, 1)->create(
-    		[ 'authority' => 'counselor',
-    	]);
+    	// factory(App\User::class, 1)->create(
+    	// 	[ 'authority' => 'counselor',
+    	// ]);
     
     }
 }

@@ -21,7 +21,7 @@ class CreateApplicationTable extends Migration
 
               $application->integer('student_id')->unsigned();
               $application->foreign('student_id')
-              ->references('user_id')
+              ->references('id')
               ->on('users');
 
           });

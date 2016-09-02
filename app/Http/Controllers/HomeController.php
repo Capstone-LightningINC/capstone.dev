@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
@@ -35,8 +36,9 @@ class HomeController extends Controller
     public function mySchools(){
         return view('schools.mySchools');
     }
-    public function profile(){
-        return view('auth.profile');
+    public function profile($id){
+        $user = User::find($id);
+        return view('auth.profile', ["user" => $user]);
     }
     public function search(){
         return view('schools.search');

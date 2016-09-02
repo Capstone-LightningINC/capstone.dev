@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Database\Seeder;
 
 class personalInfoSeeder extends Seeder
@@ -11,11 +12,12 @@ class personalInfoSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i <= 3; $i++) { 
+
+        for ($i=0; $i < 10; $i++) { 
 
             $personalInfo = new App\PersonalInfo();
-           	$personalInfo->student_id = $i+1;
-            $personalInfo->DOB = "01-01-2000";
+            $personalInfo->student_id = $i + 1;
+            $personalInfo->DOB = "2000-01-01";
             $personalInfo->photo = 'img/uploads/avatar'.$i;
             $personalInfo->WeChat = "WeChat".$i;
             $personalInfo->parent1 = 'Joe Parent';
@@ -30,32 +32,5 @@ class personalInfoSeeder extends Seeder
             $personalInfo->major3 = 'biology';
             $personalInfo->save();
         }
-
-        for ($i=0; $i <= 4; $i++) {
-        	$personalInfo = new App\PersonalInfo();
-        	$personalInfo->student_id = $i+4;
-        	$personalInfo->DOB = "02-02-2002";
-            $personalInfo->photo = 'img/uploads/avatar'.$i;
-            $personalInfo->parent1 = 'Jane Doe';
-            $personalInfo->highSchool = 'Washington High School';
-            $personalInfo->SAT = 2000;
-            $personalInfo->TOEFL = 90;
-            $personalInfo->GPA = 3.7;
-            $personalInfo->major1 = 'communications';
-            $personalInfo->major2 = 'art';
-            $personalInfo->save();
-    	}
-
-    	for ($i=0; $i <= 3; $i++) {
- 			$personalInfo = new App\PersonalInfo();
- 			$personalInfo->student_id = $i+8;
-        	$personalInfo->DOB = "03-03-2003";
-            $personalInfo->photo = 'img/uploads/avatar'.$i;
-            $personalInfo->highSchool = 'Franklin High School';
-            $personalInfo->ACT = 21;
-            $personalInfo->GPA = 3.5;
-            $personalInfo->major1 = 'music';
-            $personalInfo->save();
-    	}
 	}
 }
