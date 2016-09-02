@@ -15,9 +15,9 @@ class CreatePersonalInfoTable extends Migration
         Schema::create('personalInfo', function (Blueprint $personalInfo) {
             $personalInfo->increments('id');
 
-            $personalInfo->integer('student_id')->unsigned();
+            $personalInfo->integer('student_id')->unsigned()->unique();
             $personalInfo->foreign('student_id')
-            ->references('user_id')
+            ->references('id')
             ->on('users');
 
             $personalInfo->date('DOB');

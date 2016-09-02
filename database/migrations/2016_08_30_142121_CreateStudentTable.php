@@ -14,10 +14,9 @@ class CreateStudentTable extends Migration
     {
         Schema::create('students', function(Blueprint $students) {
 
-
             $students->integer('user_id')->unsigned();
             $students->foreign('user_id')
-            ->references('user_id')
+            ->references('id')
             ->on('users');
 
             $students->integer('school_id')->unsigned();
@@ -27,10 +26,10 @@ class CreateStudentTable extends Migration
 
             $students->integer('counselor_id')->unsigned();
             $students->foreign('counselor_id')
-            ->references('user_id')
+            ->references('id')
             ->on('users');
 
-            $students->primary(['user_id', 'counselor_id', 'school_id']);
+            $students->primary('user_id');
 
         });
     }

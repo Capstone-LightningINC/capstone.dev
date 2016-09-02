@@ -16,7 +16,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('/student', 'HomeController@studentProfile');
 Route::get('/counselor', 'HomeController@counselor');
-Route::get('/auth/profile', 'HomeController@profile');
+Route::get('/profile/{id}', 'HomeController@profile');
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
 
 

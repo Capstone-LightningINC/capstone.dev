@@ -52,7 +52,7 @@
     <div class="form-group">
       <label for="counselor">Counselor</label>
       <div class="col-md-6">
-        <input id="counselor" value="{{ old('counselor') }}" type="counselor" name="counselor" type="counselor" class="form-control input-md" required="">
+        <input id="counselor" value="{{ old('counselor') }}" type="counselor" name="counselor" type="counselor" class="form-control input-md">
       </div>
     </div>
 
