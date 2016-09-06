@@ -62,9 +62,9 @@
         <select name="authority" value="{{ old('authority') }}">
           <option value="student">Student</option>
           <option value="counselor">Counselor</option>
-          <option value="manager">Manager</option>
+     <!--      <option value="manager">Manager</option>
           <option value="assistant">Assistant</option>
-          <option value="parent">Parent</option>
+          <option value="parent">Parent</option> -->
         </select>
       </div>
     </div>

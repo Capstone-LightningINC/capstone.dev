@@ -16,7 +16,7 @@ class PersonalInfoController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -37,7 +37,10 @@ class PersonalInfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, Post::$rules);
+        $personalInfo = new App\personalInfo();
+        $personalInfo->student_id = Auth::user()->id;
+        return $this->validateAndSave($post, $request);
     }
 
     /**
@@ -46,9 +49,12 @@ class PersonalInfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        // $personalInfo = personalInfo::with('user')->findOrFail($id);
+        // if ($request->user()) {
+        //     return view('')->with($data);
+        // }
     }
 
     /**
@@ -83,5 +89,9 @@ class PersonalInfoController extends Controller
     public function destroy($id)
     {
         //
+    }
+    private function validateAndSave(personalInfo $personalInfo, Request $request) 
+    {
+        // $request->session()
     }
 }

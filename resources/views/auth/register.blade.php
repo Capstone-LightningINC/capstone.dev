@@ -43,7 +43,23 @@
     </div>
 
     <div class="form-group">
-      <label for="phone">phone</label>
+        <label>Gender</label>
+        <label class="radio-inline"><input type="radio" name="gender" value="0">
+          Male
+        </label>
+        <label class="radio-inline"><input type="radio" name="gender" value="1">
+          Female
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Date of Birth</label>
+        <div class="col-md-6">
+          <input type="date" id="dob" name="DOB" placeholder="02/16/00" value="{{ isset($user) ? $user->personalInfo->DOB : '' }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
       <div class="col-md-6">
         <input id="phone" value="{{ old('phone') }}" name="phone" type="text" class="form-control input-md" required="" placeholder="ex: +84470360812">
       </div>
@@ -68,12 +84,12 @@
     <div class="form-group">
       <label for="role">Role</label>
       <div class="col-md-6">
-        <select name="authority" value="{{ old('authority') }}">
+        <select name="authority">
           <option value="student">Student</option>
           <option value="counselor">Counselor</option>
-          <option value="manager">Manager</option>
+          <!-- <option value="manager">Manager</option>
           <option value="assistant">Assistant</option>
-          <option value="parent">Parent</option>
+          <option value="parent">Parent</option> -->
         </select>
       </div>
     </div>
