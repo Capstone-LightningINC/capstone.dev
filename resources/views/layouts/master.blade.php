@@ -31,12 +31,13 @@
 <footer>
 
     <p>
-        <span style="text-align:left;float:left">&copy; 2016 <a href="http://themifycloud.com/downloads/janux-free-responsive-admin-dashboard-template/" alt="Bootstrap_Metro_Dashboard">Lightning INC</a></span>
+        <span style="text-align:left;float:left">&copy; 2016 <a href="" alt="">College Go</a></span>
 
     </p>
 
 </footer>
 
+@include('partials.scripts')
 
 </body>
 </html>
