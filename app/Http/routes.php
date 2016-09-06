@@ -33,8 +33,10 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 //    SCHOOLS   //
-Route::get('/student/mySchools', 'HomeController@mySchools');
-Route::get('/schools/search', 'HomeController@search');
+Route::get('/student/{id}/mySchools', 'SchoolsController@mySchools');
+Route::get('/schools/index', 'SchoolsController@index');
+Route::get('/school/search', 'SchoolsController@search');
+Route::get('/schools/{biz_name}/show', 'SchoolsController@show');
 
 //    TASKS   //
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
