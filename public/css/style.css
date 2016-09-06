@@ -3091,7 +3091,7 @@ button.btn.btn-success.register {
 }
 
 .schooltext {
-<<<<<<< HEAD
+
     
 }
 
@@ -3110,7 +3110,7 @@ textarea#textarea2.cleditor {
 div.row.search {
 	margin: 0 auto 20px auto;
 }
-=======
-
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
 }
->>>>>>> 4cd894c1530b98ebe811dd068ae9d6a47e293950

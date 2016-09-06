@@ -12,14 +12,14 @@ class CreateEssaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('essays', function (Blueprint $user) {
-            $application->integer('student_id')->unsigned();
-            $application->foreign('student_id')
-              ->references('user_id')
-              ->on('users');
-
-
-        }
+//        Schema::create('essays', function (Blueprint $user) {
+//            $application->integer('student_id')->unsigned();
+//            $application->foreign('student_id')
+//              ->references('user_id')
+//              ->on('users');
+//
+//
+//        }
     }
 
     /**

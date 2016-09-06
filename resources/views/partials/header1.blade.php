@@ -6,7 +6,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="index.html"><span>Lightning Education INC</span></a>
+			<a class="brand" href="index.html"><span>CollegeGo</span></a>
 
 			<!-- start: Header Menu -->
 			<div class="nav-no-collapse header-nav">

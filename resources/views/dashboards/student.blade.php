@@ -23,9 +23,12 @@
 
         </div>
 
-        <div class=" span4 widget green" onTablet="span5" onDesktop="span4">
-
-            <p>calender</p>
+        <div class=" span4 widget green" onTablet="span5" onDesktop="span4" id="calendar">
+            <div id="calendar">
+            {{--{!! $calendar->calendar() !!}--}}
+            {{--{!! $calendar->script() !!}--}}
+            </div>
+            @include('partials.calendar')
 
             <div class="clearfix"></div>
 
