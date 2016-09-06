@@ -19,9 +19,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
     	'phone' => $faker->e164PhoneNumber,
-        'WeChat' => $faker->userName,
     	'authority' => 'student',
-    	'company_id' => 100,
+    	'company' => "Lightning Inc",
+        'counselor_name' => "Phillip Garcia",
         'remember_token' => str_random(10)
     ];
 });

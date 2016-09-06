@@ -17,7 +17,7 @@
     <div class="form-group">
       <label for="Preferred Name">Preferred Name</label>
       <div class="col-md-6">
-      <input id="name" value="{{ old('preferred_name') }}" name="preferredName" type="text" class="form-control input-md" required="">
+      <input id="name" value="{{ old('preferred_name') }}" name="preferred_name" type="text" class="form-control input-md" required="">
       </div>
     </div>
 
@@ -43,16 +43,25 @@
     </div>
 
     <div class="form-group">
-      <label for="phone">Phone</label>
+      <label for="phone">phone</label>
       <div class="col-md-6">
-        <input id="phone" value="{{ old('phone') }}" type="phone" name="phone" type="phone" class="form-control input-md" required="">
+        <input id="phone" value="{{ old('phone') }}" name="phone" type="text" class="form-control input-md" required="" placeholder="ex: +84470360812">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="company">Company</label>
+      <div class="col-md-6">
+        <select name="company" value="{{ old('company') }}">
+          <option value="student">Lightning Inc</option>
+        </select>
       </div>
     </div>
 
     <div class="form-group">
       <label for="counselor">Counselor</label>
       <div class="col-md-6">
-        <input id="counselor" value="{{ old('counselor') }}" type="counselor" name="counselor" type="counselor" class="form-control input-md">
+        <input id="counselor" value="{{ old('counselor_name') }}" type="text" name="counselor_name" type="counselor" class="form-control input-md" required="">
       </div>
     </div>
 
