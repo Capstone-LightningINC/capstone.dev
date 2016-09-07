@@ -69,16 +69,16 @@ class HomeController extends Controller
         return view('schools.mySchools');
     }
     public function profile($id){
-
-        //$date = new \DateTime($request->input('dob'));
-        //$user->dob = $date->format('Y-m-d');
-
-        $user = Auth::user();//User::find($id);
-        // dd($user);
-        if (is_null($user->personalInfo)) {//dd($user);
+        $user = Auth::user();
+        if (is_null($user->personalInfo)) {
             return view('auth.profileBlank', ['user' => $user]);
         }
         return view('auth.profile', ["user" => $user]);
+    }
+    public function editProfile($id) {
+        $user = Auth::user();
+        // dd($user);
+        return view('auth.editProfile', ['user' => $user]);
     }
     public function search(){
         return view('schools.search');

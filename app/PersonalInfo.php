@@ -36,17 +36,17 @@ class PersonalInfo extends Model
  	public function setInfo($value) 
  	{
  		$this->attributes['name'] = strip_tags($value['name']);
- 		$this->attributes['preferred_name'] = strip_tags($value);
- 		$this->attributes['parent1'] = strip_tags($value);
- 		$this->attributes['parent2'] = strip_tags($value);
- 		$this->attributes['highSchool'] = strip_tags($value);
- 		$this->attributes['SAT'] = strip_tags($value);
- 		$this->attributes['ACT'] = strip_tags($value);
- 		$this->attributes['TOEFL'] = strip_tags($value);
- 		$this->attributes['GPA'] = strip_tags($value);
- 		$this->attributes['major1'] = strip_tags($value);
- 		$this->attributes['major2'] = strip_tags($value);
- 		$this->attributes['major3'] = strip_tags($value);
+ 		$this->attributes['preferred_name'] = strip_tags($value['preferred_name']);
+ 		$this->attributes['parent1'] = strip_tags($value['parent1']);
+ 		$this->attributes['parent2'] = strip_tags($value['parent2']);
+ 		$this->attributes['highSchool'] = strip_tags($value['highSchool']);
+ 		$this->attributes['SAT'] = strip_tags($value['SAT']);
+ 		$this->attributes['ACT'] = strip_tags($value['ACT']);
+ 		$this->attributes['TOEFL'] = strip_tags($value['TOEFL']);
+ 		$this->attributes['GPA'] = strip_tags($value['GPA']);
+ 		$this->attributes['major1'] = strip_tags($value['major1']);
+ 		$this->attributes['major2'] = strip_tags($value['major2']);
+ 		$this->attributes['major3'] = strip_tags($value['major3']);
 
  	}
 

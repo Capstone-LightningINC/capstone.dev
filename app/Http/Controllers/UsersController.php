@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Schools;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -37,7 +39,10 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $this->validate($request, Post::$rules);
+        // $user = new App\user();
+        // $user->id = Auth::user()->id;
+        // return $this->validateAndSave($post, $request);
     }
 
     /**
@@ -48,8 +53,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        // $user = User::('personalInfo')->findOrFail();
-        // return view('')
+    
     }
 
     /**
@@ -84,5 +88,28 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function validateAndSave(Request $request) 
+    {
+       
+        $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
+        $this->validate($request, Schools::$rules);
+        $request->session()->forget('ERROR_MESSAGE');
+
+        $user = Auth::user();
+
+        $user->name = $request->input('name');
+        $user->preferred_name = $request->input('preferred_name');
+        $user->gender = $request->input('gender');
+        $user->email = $request->input('email');
+        $user->password = $request->input('password');
+        $user->phone = $request->input('phone');
+        // dd($request->all());
+        $user->save();
+
+        $request->session()->flash(
+            'SUCCESS_MESSAGE', 'Update saved');
+        return redirect()->action('HomeController@profile');
     }
 }

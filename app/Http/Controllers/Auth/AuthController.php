@@ -75,18 +75,4 @@ class AuthController extends Controller
 
         return $user;
     }
-
-    // protected function authenticated($user)
-    // {
-
-    //     if ($user->authority == 'student') {
-    //         return redirect('/profile/{id}');
-    //     } elseif ($user->authority == 'counselor') {
-    //         return redirect('/counselor');
-    //     }
-
-        
-    // }
-
-
 }
