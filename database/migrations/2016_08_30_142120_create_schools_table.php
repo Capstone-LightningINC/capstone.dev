@@ -21,7 +21,7 @@ class CreateSchoolsTable extends Migration
             $schools->string('e_state');
             $schools->integer('e_postal');
             $schools->string('e_country');
-            $schools->string('e_county');
+            $schools->string('loc_county');
             $schools->string('loc_FIPS');
             $schools->string('loc_MSA');
             $schools->string('loc_PMSA');
@@ -42,6 +42,7 @@ class CreateSchoolsTable extends Migration
             $schools->string('oos_tuition');
             $schools->integer('rank')->nullable();
             $schools->float('acceptance_rate')->nullable();
+            $schools->string('majors')->nullable();
             $schools->string('topic1')->nullable();
             $schools->string('topic2')->nullable();
             $schools->string('topic3')->nullable();
@@ -53,9 +54,8 @@ class CreateSchoolsTable extends Migration
 
             $schools->timestamps();
         });
+
     }
-
-
 
     /**
      * Reverse the migrations.

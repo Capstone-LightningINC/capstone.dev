@@ -77,7 +77,6 @@ class HomeController extends Controller
         }
         return view('auth.profile', ["user" => $user]);
     }
-
     public function editProfile($id) {
         $user = Auth::user();
         return view('auth.editProfile', ['user' => $user]);
@@ -90,6 +89,7 @@ class HomeController extends Controller
         return view('schools.search', ['schools' => $schools]);
     }
     public function school($id){
+
         $school = School::find($id);
         return view('schools.school', ["school" => $school]);
     }
