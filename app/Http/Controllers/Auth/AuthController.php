@@ -23,7 +23,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
     protected $redirectAfterLogout = '/';
-    protected $redirectTo = '/auth/profile';
+    protected $redirectTo = '/profile/{id}';
     /**
      * Create a new authentication controller instance.
      *
@@ -57,15 +57,36 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
+            'preferred_name' => $data['preferred_name'],
             'email' => $data['email'],
+            'gender' => $data['gender'],
             'password' => bcrypt($data['password']),
             'phone' => $data['phone'],
             'company' => $data['company'],
+            'authority' => $data['authority'],
             'counselor_name' => $data['counselor_name'],
-            'preferred_name' => $data['preferred_name']
         ]);
+        $profile = new \App\PersonalInfo;
+        $profile->student_id = $user->id;
+        $profile->DOB = $data['DOB'];
+        $profile->save();
+
+        return $user;
     }
+
+    // protected function authenticated($user)
+    // {
+
+    //     if ($user->authority == 'student') {
+    //         return redirect('/profile/{id}');
+    //     } elseif ($user->authority == 'counselor') {
+    //         return redirect('/counselor');
+    //     }
+
+        
+    // }
+
 
 }

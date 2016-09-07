@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $user->string('preferred_name');
             $user->boolean('gender');
             $user->string('email')->unique();
-            $user->string('password', 15);
+            $user->string('password');
             $user->string('phone', 12);
             $user->string('company');
             $user->string('counselor_name')->nullable();

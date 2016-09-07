@@ -1,4 +1,4 @@
-@extends("layouts.register")
+@extends('layouts.register')
 @section('content')
 
 <div class="register">

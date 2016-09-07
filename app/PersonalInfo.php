@@ -35,7 +35,7 @@ class PersonalInfo extends Model
  	}
  	public function setInfo($value) 
  	{
- 		$this->attributes['name'] = strip_tags($value);
+ 		$this->attributes['name'] = strip_tags($value['name']);
  		$this->attributes['preferred_name'] = strip_tags($value);
  		$this->attributes['parent1'] = strip_tags($value);
  		$this->attributes['parent2'] = strip_tags($value);

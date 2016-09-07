@@ -2,6 +2,7 @@
 
 @section('content')
 
+<<<<<<< HEAD
 
     <div class="col-md-2">
         <div class="schoolbox">
@@ -18,6 +19,7 @@
             <div class="pull-right"><button class="btn btn-success btn-sm">Add to My Schoools</button></div>
         </div>
     </div>
+
 
 
 
