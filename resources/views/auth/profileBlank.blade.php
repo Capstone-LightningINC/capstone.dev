@@ -166,6 +166,5 @@
 	</div><!--/span-->
 
 </div><!--/row-->
-<input type="hidden" id="csrf-token" value="{{ Session::token() }}">
-<input type="hidden" id="is-logged-in" value="{{ Auth::check() }}">
+
 @stop
