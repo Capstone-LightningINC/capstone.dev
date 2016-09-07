@@ -12,8 +12,6 @@ class PersonalInfo extends Model
     protected $dates = ['created_at', 'updated_at'];
 
     public static $rules = [
-		'name' => 'required|string',
-		'preferred_name' => 'required|string',
 		'DOB'  => 'required|date',
 		'WeChat' => 'string',
 		"parent1" => 'string',
@@ -22,7 +20,7 @@ class PersonalInfo extends Model
 		'SAT' => 'integer',
 		'ACT' => 'integer',
 		'TOEFL' => 'integer',
-		'GPA' => 'float',
+		'GPA' => 'numeric',
 		'major1' => 'string',
 		'major2' => 'string',
 		'major3' => 'string'
