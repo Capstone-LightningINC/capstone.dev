@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\personalInfo;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -53,10 +53,7 @@ class PersonalInfoController extends Controller
      */
     public function show(Request $request, $id)
     {
-        // $personalInfo = personalInfo::with('user')->findOrFail($id);
-        // if ($request->user()) {
-        //     return view('')->with($data);
-        // }
+
     }
 
     /**
@@ -97,8 +94,10 @@ class PersonalInfoController extends Controller
     public function validateAndSave(Request $request) 
     {
         $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
-        $this->validate($request, School::$rules);
+        $this->validate($request, personalInfo::$rules);
         $request->session()->forget('ERROR_MESSAGE');
+
+        $personalInfo = Auth::user()->personalInfo;
 
         $personalInfo->DOB = $request->input('DOB');
         $personalInfo->photo = $request->input('photo');

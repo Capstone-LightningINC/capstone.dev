@@ -103,7 +103,9 @@ class UsersController extends Controller
         $user->preferred_name = $request->input('preferred_name');
         $user->gender = $request->input('gender');
         $user->email = $request->input('email');
-        $user->password = $request->input('password');
+        if($request->has('password')) {
+            $user->password = $request->input('password');
+        }
         $user->phone = $request->input('phone');
         // dd($request->all());
         $user->save();
