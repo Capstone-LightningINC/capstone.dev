@@ -107,7 +107,6 @@ class UsersController extends Controller
             $user->password = $request->input('password');
         }
         $user->phone = $request->input('phone');
-        // dd($request->all());
         $user->save();
 
         $request->session()->flash(
