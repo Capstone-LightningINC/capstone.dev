@@ -21,21 +21,41 @@ class CreateSchoolsTable extends Migration
             $schools->string('e_state');
             $schools->integer('e_postal');
             $schools->string('e_country');
+            $schools->string('e_county');
+            $schools->string('loc_FIPS');
+            $schools->string('loc_MSA');
+            $schools->string('loc_PMSA');
             $schools->string('loc_TZ');
+            $schools->string('loc_DST');
             $schools->string('biz_phone');
             $schools->string('biz_fax');
             $schools->string('biz_email');
             $schools->string('web_url');
+            $schools->string('img_url');
             $schools->string('c_type');
+            $schools->string('c_years');
             $schools->string('c_setting');
             $schools->boolean('c_housing');
             $schools->integer('c_pop');
             $schools->string('c_ratio');
+            $schools->string('c_tuition');
+            $schools->string('oos_tuition');
             $schools->integer('rank')->nullable();
             $schools->float('acceptance_rate')->nullable();
+            $schools->string('topic1')->nullable();
+            $schools->string('topic2')->nullable();
+            $schools->string('topic3')->nullable();
+            $schools->string('topic4')->nullable();
+            $schools->string('topic5')->nullable();
+            $schools->string('topic6')->nullable();
+            $schools->string('topic7')->nullable();
+            $schools->string('topic8')->nullable();
+
             $schools->timestamps();
         });
     }
+
+
 
     /**
      * Reverse the migrations.
