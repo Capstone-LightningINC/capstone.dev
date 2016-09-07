@@ -158,6 +158,7 @@
 				<div class="form-actions">
 				  <button type="submit" id='save' name='name' class="btn btn-primary">Save</button>
 				</div>
+				<button type="submit" class="btn btn-primary" >Edit</button>
 @endif
 			  </fieldset>
 			</form>   
