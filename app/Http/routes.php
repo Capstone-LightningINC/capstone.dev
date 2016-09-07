@@ -35,6 +35,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 //    SCHOOLS   //
 Route::get('/student/mySchools', 'HomeController@mySchools');
 Route::get('/schools/search', 'HomeController@search');
+Route::get('/schools/{id}', 'HomeController@school');
+
 
 //    TASKS   //
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
@@ -42,7 +44,7 @@ Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
 Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
 Route::get('/student/myEssays', 'HomeController@myEssays');
 Route::get('/student/activities', 'HomeController@activities');
-
+Route::get('/counselor/createTasks', 'HomeController@createTasks');
 
 
 

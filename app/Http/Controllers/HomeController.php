@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 use App\Event;
 use Illuminate\Http\Request;
 use App\User;
+use App\School;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -72,8 +74,15 @@ class HomeController extends Controller
         $user = User::find($id);
         return view('auth.profile', ["user" => $user]);
     }
-    public function search(){
-        return view('schools.search');
+    public function search(Request $request){
+        $keyword = $request->input('keyword');
+        $schools = School::SearchByKeyword($keyword);
+        $schools = $schools->paginate(10);
+        return view('schools.search', ['schools' => $schools]);
+    }
+    public function school($id){
+        $school = School::find($id);
+        return view('schools.school', ["school" => $school]);
     }
     public function activities(){
         return view('schools.activities');
@@ -94,5 +103,7 @@ class HomeController extends Controller
     public function myEssays(){
         return view('tasks.myEssays');
     }
-
+    public function createTasks(){
+        return view('tasks.createTasks');
+    }
 }
