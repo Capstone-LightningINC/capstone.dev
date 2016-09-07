@@ -69,7 +69,7 @@
       <label for="company">Company</label>
       <div class="col-md-6">
         <select name="company" value="{{ old('company') }}">
-          <option value="student">Lightning Inc</option>
+          <option value="Lightning Inc">Lightning Inc</option>
         </select>
       </div>
     </div>
@@ -77,7 +77,7 @@
     <div class="form-group">
       <label for="counselor">Counselor</label>
       <div class="col-md-6">
-        <input id="counselor" value="{{ old('counselor_name') }}" type="text" name="counselor_name" type="counselor" class="form-control input-md" required="">
+        <input id="counselor" value="{{ old('counselor_name') }}" type="text" name="counselor_name" type="counselor" class="form-control input-md">
       </div>
     </div>
 

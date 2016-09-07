@@ -16,8 +16,13 @@
 Route::get('/', 'HomeController@index');
 Route::get('/student', 'HomeController@studentProfile');
 Route::get('/counselor', 'HomeController@counselor');
-Route::get('/profile/{id}', 'HomeController@profile');
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
+
+// PROFILE //
+Route::get('/profile/{id}', 'HomeController@profile');
+Route::get('/profile/{student_id}/edit', 'HomeController@editProfile');
+Route::post('/save/profile', 'PersonalInfoController@validateAndSave');
+Route::post('/save/user', 'UsersController@validateAndSave');
 
 
 //    AUTHORIZE   //
@@ -34,9 +39,10 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 //    SCHOOLS   //
 
-Route::get('/student/mySchools', 'HomeController@mySchools');
+Route::get('/student/{id}/mySchools', 'SchoolsController@mySchools');
 Route::get('/schools/search', 'HomeController@search');
 Route::get('/schools/{id}', 'HomeController@school');
+
 
 
 
@@ -45,9 +51,6 @@ Route::get('/counselor/myStudents', 'HomeController@myStudents');
 Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
 Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
 Route::get('/student/myEssays', 'HomeController@myEssays');
+
 Route::get('/student/activities', 'HomeController@activities');
 Route::get('/counselor/createTasks', 'HomeController@createTasks');
-
-
-
-

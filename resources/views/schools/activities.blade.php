@@ -5,11 +5,6 @@
 	<div class="box span12">
 		<div class="box-header" data-original-title>
 			<h2><i class="halflings-icon white edit"></i><span class="break"></span></h2>
-			<div class="box-icon">
-				<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-				<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-				<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-			</div>
 		</div>
 		<div class="box-content">
 			<form class="form-horizontal">
@@ -48,14 +43,20 @@
 					<textarea class="cleditor" id="textarea2" placeholder="Write additional details here"></textarea>
 				  </div>
 				</div>
+			
 				<div class="form-actions">
-				  <button type="submit" class="btn btn-primary">Save changes</button>
-				  <button type="reset" class="btn btn-danger">Cancel</button>
+				  <button type="submit" class="btn btn-primary">Save</button>
+				  <button type="reset" class="btn btn-danger delete">Delete</button>
+				  <button type="submit" class="btn btn-info new">New Entry</button>
 				</div>
+
 			  </fieldset>
 			</form>
 		</div>
 	</div>
 </div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="/js/modals.js"></script>
 
 @stop

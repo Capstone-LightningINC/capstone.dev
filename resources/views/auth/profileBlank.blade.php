@@ -6,7 +6,8 @@
  <?php $studentCheck = $user->authority == 'student'; ?>
  <?php $counselorCheck = $user->authority == 'counselor'; ?>
 
- <form class="form-horizontal" method="post" action="{{ action('HomeController@profile') }}">
+<form class="form-horizontal" method="post" action="{{ action('HomeController@profile') }}">
+{{ csrf_field() }}
 <div class="row-fluid sortable">
 	<div class="box span12">
 		<div class="box-header" data-original-title>
@@ -30,21 +31,13 @@
 				</div>
 			
 				<div class="control-group">
-				  <label class="control-label" for="fileInput">Photo Upload</label>
-				  <div class="controls">
-					<input class="input-file uniform_on" id="fileInput" type="file">
-				  </div>
-				</div>
-			
-				<div class="control-group">
 				  <label class="control-label" for="typeahead">Email </label>
 				  <div class="controls">
 					<input type="text" class="span6 typeahead" id="typeahead">
 				  </div>
 				</div>  
 				<div class="form-actions">
-				  <button type="submit" class="btn btn-primary">Save changes</button>
-				  <button type="reset" class="btn">Cancel</button>
+				  <button type="submit" id='save' name='name' class="btn btn-primary">Save</button>
 				</div>
 			  </fieldset>
 			</form>   
@@ -61,11 +54,22 @@
 		<div class="box-content">
 			<form class="form-horizontal">
 			  <fieldset>
+			  <div class="control-group">
+				  <label class="control-label" for="fileInput">Photo Upload</label>
+				  <div class="controls">
+					<input class="input-file uniform_on" id="fileInput" type="file">
+				  </div>
+				</div>
 			  	<div class="form-group">
 		          <label class="control-label" for="typeahead">Gender</label>
 		          <div class="controls">
-					<input type="radio" name="gender" value="0"> Male<br>
-					<input type="radio" name="gender" value="1">Female<br>
+					@if($user->gender == 1)
+		              <input type="radio" name="gender" value="0"> Male<br>
+		              <input type="radio" name="gender" value="1" checked>Female<br>
+		            @else
+		              <input type="radio" name="gender" value="0" checked> Male<br>
+		            <input type="radio" name="gender" value="1"> Female<br>
+		          @endif
 		          </div>
 		        </div>
 			    <div class="form-group">
@@ -90,8 +94,7 @@
 				</div>
 				@endIf
 				<div class="form-actions">
-				  <button type="submit" class="btn btn-primary">Save changes</button>
-				  <button type="reset" class="btn">Cancel</button>
+				  <button type="submit" id='save' name='name' class="btn btn-primary">Save</button>
 				</div>
 			  </fieldset>
 			</form>   
@@ -153,8 +156,7 @@
 				</div>
 
 				<div class="form-actions">
-				  <button type="submit" class="btn btn-primary">Save changes</button>
-				  <button type="reset" class="btn">Cancel</button>
+				  <button type="submit" id='save' name='name' class="btn btn-primary">Save</button>
 				</div>
 @endif
 			  </fieldset>
@@ -164,4 +166,6 @@
 	</div><!--/span-->
 
 </div><!--/row-->
+<input type="hidden" id="csrf-token" value="{{ Session::token() }}">
+<input type="hidden" id="is-logged-in" value="{{ Auth::check() }}">
 @stop

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\personalInfo;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -26,7 +26,9 @@ class PersonalInfoController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('personalInfo.profile');
+        
     }
 
     /**
@@ -51,10 +53,7 @@ class PersonalInfoController extends Controller
      */
     public function show(Request $request, $id)
     {
-        // $personalInfo = personalInfo::with('user')->findOrFail($id);
-        // if ($request->user()) {
-        //     return view('')->with($data);
-        // }
+
     }
 
     /**
@@ -65,7 +64,8 @@ class PersonalInfoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $personalInfo = personalInfo::findOrFail($id);
+        return view('HomeController@editProfile');
     }
 
     /**
@@ -77,7 +77,8 @@ class PersonalInfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $personalInfo = personalInfo::findOrFail($id);
+        return $this->validateAndSave($personalInfo, $request);
     }
 
     /**
@@ -90,8 +91,31 @@ class PersonalInfoController extends Controller
     {
         //
     }
-    private function validateAndSave(personalInfo $personalInfo, Request $request) 
+    public function validateAndSave(Request $request) 
     {
-        // $request->session()
+        $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
+        $this->validate($request, personalInfo::$rules);
+        $request->session()->forget('ERROR_MESSAGE');
+
+        $personalInfo = Auth::user()->personalInfo;
+
+        $personalInfo->DOB = $request->input('DOB');
+        $personalInfo->photo = $request->input('photo');
+        $personalInfo->WeChat = $request->input('WeChat');
+        $personalInfo->parent1 = $request->input('parent1');
+        $personalInfo->parent2 = $request->input('parent2');
+        $personalInfo->highSchool = $request->input('highSchool');
+        $personalInfo->SAT = $request->input('SAT');
+        $personalInfo->ACT = $request->input('ACT');
+        $personalInfo->TOEFL = $request->input('TOEFL');
+        $personalInfo->GPA = $request->input('GPA');
+        $personalInfo->major1 = $request->input('major1');
+        $personalInfo->major2 = $request->input('major2');
+        $personalInfo->major3 = $request->input('major3');
+        $personalInfo->save();
+
+        $request->session()->flash(
+            'SUCCESS_MESSAGE', 'Update saved');
+        return redirect()->action('HomeController@profile');
     }
 }
