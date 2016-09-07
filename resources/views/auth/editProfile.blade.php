@@ -151,7 +151,6 @@
 			</div>
 		</div><!--/span-->
 	</div><!--/row-->
-	@endif
 </div>
 </form>
 
