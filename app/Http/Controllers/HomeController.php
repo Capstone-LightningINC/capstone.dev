@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use DateTime;
 use Illuminate\Http\Request;
 use App\User;
 use App\School;
@@ -10,6 +11,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Calendar;
+use MaddHatter\LaravelFullcalendar\SimpleEvent;
 
 class HomeController extends Controller
 {
@@ -21,34 +24,34 @@ class HomeController extends Controller
 
         //    DASHBOARDS   //
     public function studentProfile(){
-//        $events = [];
-//        $events[] = \Calendar::event(
-//            'Event One', //event title
-//            false, //full day event?
-//            '2015-02-11T0800', //start time (you can also use Carbon instead of DateTime)
-//            '2015-02-12T0800', //end time (you can also use Carbon instead of DateTime)
-//            0 //optionally, you can specify an event ID
-//        );
-//
-//        $events[] = \Calendar::event(
-//            "Valentine's Day", //event title
-//            true, //full day event?
-//            new \DateTime('2015-02-14'), //start time (you can also use Carbon instead of DateTime)
-//            new \DateTime('2015-02-14'), //end time (you can also use Carbon instead of DateTime)
-//            'stringEventId' //optionally, you can specify an event ID
-//        );
-//
-//        $eloquentEvent = Event::first(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
-//
-//
-//        $calendar = \Calendar::addEvents($events) //add an array with addEvents
-//        ->addEvent($eloquentEvent, [ //set custom color fo this event
-//            'color' => '#800',
-//        ])->setOptions([ //set fullcalendar options
-//            'firstDay' => 1
-//        ])->setCallbacks([ //set fullcalendar callback options (will not be JSON encoded)
-//            'viewRender' => 'function() {alert("Callbacks!");}'
-//        ]);
+        $events = [];
+
+        $event = new Event();
+        $event->title =  'Event One'; //event title
+        $event->all_day = false; //full day event?
+        $event->start = '2016-09-11 00:00:00'; //start time (you can also use Carbon instead of DateTime)
+        $event->end = '2016-09-12 00:00:00'; //end time (you can also use Carbon instead of DateTime)
+        $event->save();
+
+        $events[] = Calendar::event(
+            "Valentine's Day", //event title
+            true, //full day event?
+            new DateTime('2015-02-14'), //start time (you can also use Carbon instead of DateTime)
+            new DateTime('2015-02-14'), //end time (you can also use Carbon instead of DateTime)
+            'stringEventId' //optionally, you can specify an event ID
+        );
+
+        //$eloquentEvent = SimpleEvent::first(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
+
+
+        $calendar = \Calendar::addEvents($events) //add an array with addEvents
+        ->addEvent($event, [ //set custom color fo this event
+            'color' => '#800',
+        ])->setOptions([ //set fullcalendar options
+            'firstDay' => 1
+        ])->setCallbacks([ //set fullcalendar callback options (will not be JSON encoded)
+            'viewRender' => 'function() {alert("Callbacks!");}'
+        ]);
 
         return view('dashboards.student', compact('calendar'));
     }

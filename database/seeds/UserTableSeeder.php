@@ -13,9 +13,19 @@ class UserTableSeeder extends Seeder
     {
 
     	factory(App\User::class, 10)->create();
-    	// factory(App\User::class, 1)->create(
-    	// 	[ 'authority' => 'counselor',
-    	// ]);
-    
+
+        $user1 = [
+        'name' => 'Phillip Garcia',
+    	'preferred_name' => 'Phillip',
+    	'gender' => 1,
+        'email' => 'phillipthomasgarcia@gmail.com',
+        'password' => bcrypt("password"),
+    	'phone' => 5558675309,
+    	'authority' => 'counselor',
+    	'company' => "Lightning Inc",
+        'counselor_name' => "Phillip Garcia",
+        'remember_token' => str_random(10)];
+
+
     }
 }

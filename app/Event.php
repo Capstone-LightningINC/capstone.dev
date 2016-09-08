@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model implements \MaddHatter\LaravelFullcalendar\Event
 {
-
+    public $timestamps = false;
     protected $dates = ['start', 'end'];
 
     /**

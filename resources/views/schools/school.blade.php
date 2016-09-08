@@ -2,7 +2,7 @@
 
 @section('content')
 
-<<<<<<< HEAD
+
 
     <div class="col-md-2">
         <div class="schoolbox">
@@ -16,7 +16,7 @@
             <p class="text-justify">Population: {{ $school->c_pop }}</p>
             <p class="text-justify">Ratio: {{ $school->c_ratio }}</p>
             <p class="text-justify">Type: {{ $school->c_type }}</p>
-            <div class="pull-right"><button class="btn btn-success btn-sm">Add to My Schoools</button></div>
+            <a href="{{ action("SchoolsController@addToMySchools", ['school_id'=> $school->school_id]) }}"><div class="pull-right"><button class="btn btn-success btn-sm">Add to My Schoools</button></div></a>
         </div>
     </div>
 
