@@ -1,47 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+<body class="error503">
+    <div class="container" style="margin-top:5%;">
+        <div class="row error503">
+          <h1 class="text-center error503" alt="error503 image">Error 503</h1>
+            <p>Down for maintenance! ¯\_(ツ)_/¯</p>
+            <p>We'll be right back!</p>
+            <center><div class="btn-group" style="margin-top:50px;">
+             <a href="/profile/{id}"><button class="btn btn-lg register error503">Go Back</button></a>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
-            </div>
+            </div></center>
         </div>
-    </body>
-</html>
+    </div>
+</body>
+@stop

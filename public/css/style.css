@@ -3030,7 +3030,7 @@ button.btn.btn-lg.btn-transparent.login.welcome {
 	margin: 10px;
 
 }
-h1.text-center.welcome {
+h1.text-center.welcome, h1.text-center.error404 {
 	font-size: 4.5em;
 	margin-top: 15%;
 	margin-bottom: 10%;
@@ -3038,7 +3038,7 @@ h1.text-center.welcome {
 	
 
 }
-div.row.welcome {
+div.row.welcome, div.row.error404, div.row.error503  {
 	margin-right: auto;
 	margin-left: auto;
 	font-size: 20px;
@@ -3052,6 +3052,30 @@ body.welcome {
       rgba(0, 0, 0, 0.5)
     ),
     url("../img/welcome.jpg") no-repeat;
+	background-size: cover;
+	max-width: 100%;
+	height: auto; 
+}
+
+body.error404 {
+	background:  
+	linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/error404.jpg") no-repeat;
+	background-size: cover;
+	max-width: 100%;
+	height: auto; 
+}
+
+body.error503 {
+	background:  
+	linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/error503.jpg") no-repeat;
 	background-size: cover;
 	max-width: 100%;
 	height: auto; 
@@ -3114,3 +3138,5 @@ div.row.search {
 	max-width: 900px;
 	margin: 0 auto;
 }
+
+
