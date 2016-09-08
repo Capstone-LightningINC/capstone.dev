@@ -82,6 +82,13 @@ class Activities extends Controller
      */
     public function destroy($id)
     {
-        //
+        $activity = Post::find($id);
+        if (!$activity) {
+            session()->flash('message', 'Activity not found')
+        } else {
+            $activity->delete();
+            session()->flash('message', 'Activity deleted!');
+            return redirect()->action('')
+        }
     }
 }

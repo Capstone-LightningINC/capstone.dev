@@ -2,7 +2,8 @@
 $(function() {
 	$('button.new').click(function(e) {
 		e.preventDefault();
-		$('.form-actions').append('.box-content');
+		$('.box').append($('.box').html());
+		console.log($('.box').html());
 	});
 	$('button.delete').click(function(e) {
 		e.preventDefault();
