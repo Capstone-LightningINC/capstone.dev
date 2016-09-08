@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Student;
 
 class SchoolsController extends Controller
 {
@@ -159,16 +161,15 @@ class SchoolsController extends Controller
         return redirect()->action('SchoolsController@index');
     }
 
-    public function addToMySchools(Request $request) {
-        $mySchools = Schools::with('school')->firstOrCreate([
-            'school_id' => $request->input('school_id'),
-            'id' => $request->user()->id
-
+    public function addToMySchools($school_id) {
+//        dd($school_id);
+        $mySchools = Student::with('school')->firstOrCreate([
+          'user_id' => Auth::user()->id,
+            'school_id' => $school_id,
             ]);
-        $mySchools->schools->input('school');
         $mySchools->save();
 
         $school = $mySchools->school;
-
+        return redirect('/schools/search');
     }
 }
