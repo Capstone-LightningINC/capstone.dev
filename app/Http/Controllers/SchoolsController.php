@@ -21,6 +21,7 @@ class SchoolsController extends Controller
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
+    
     public function index()
     {
         $searchQuery = $request->input('search');
