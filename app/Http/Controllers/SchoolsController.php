@@ -168,9 +168,22 @@ class SchoolsController extends Controller
           'user_id' => Auth::user()->id,
             'school_id' => $school_id,
             ]);
-        $mySchools->save();
 
         $school = $mySchools->school;
-        return redirect('/schools/search');
+        return redirect()->back();
     }
+
+    public function displayMySchools() {
+        $mySchools = Auth::user()->mySchools;
+//        $mySchools = $mySchools->paginate(10);
+        return view('schools.myschools', ['schools' => $mySchools]);
+    }
+
+
+
 }
+
+
+
+
+

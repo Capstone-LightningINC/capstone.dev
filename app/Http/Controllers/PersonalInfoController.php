@@ -7,6 +7,8 @@ use App\personalInfo;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use App\Activities;
+
 
 class PersonalInfoController extends Controller
 {
@@ -122,5 +124,23 @@ class PersonalInfoController extends Controller
         $request->session()->flash(
             'SUCCESS_MESSAGE', 'Update saved');
         return redirect()->action('HomeController@profile');
+    }
+    public function addToMyActivities(Request $request) {
+
+        $myActivities = Activities::with('activity')->firstOrCreate([
+            'student_id' => Auth::user()->id,
+            'name' => $request->input('name'),
+            'position' => $request->input('position'),
+            'type' => $request->input('type'),
+            'description' => $request->input('description'),
+        ]);
+
+//        $request = $myActivities->school;
+        return redirect()->back();
+    }
+    public function deleteMyActivities($id){
+        $activity = Activities::find($id);
+        $activity->delete();
+        return redirect()->back();
     }
 }

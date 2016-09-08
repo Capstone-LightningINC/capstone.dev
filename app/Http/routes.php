@@ -43,6 +43,7 @@ Route::get('/student/{id}/mySchools', 'SchoolsController@mySchools');
 Route::get('/schools/search', 'HomeController@search');
 Route::get('/schools/{id}', 'HomeController@school');
 Route::get('myschools/{school_id}', 'SchoolsController@addToMySchools');
+Route::get('/showschools', 'SchoolsController@displayMySchools');
 
 
 
@@ -56,6 +57,8 @@ Route::get('/student/myEssays', 'HomeController@myEssays');
 Route::get('/student/activities', 'HomeController@activities');
 Route::post('/student/activities', 'HomeController@activities');
 Route::post('/student/activities', 'HomeController@destroy');
+Route::post('/student/activities/add', 'PersonalInfoController@addToMyActivities');
+Route::get('/student/activities/delete{id}', 'PersonalInfoController@deleteMyActivites');
 
 
 
