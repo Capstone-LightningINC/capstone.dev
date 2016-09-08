@@ -14,8 +14,8 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $activities) {
             $activities->increments('id');
-
-            $activities->integer('student_id')->unsigned()->unique();
+            $activities->integer('student_id')->unsigned();
+//            $activities->integer('student_id')->unsigned()->unique();
             $activities->foreign('student_id')
             ->references('id')
             ->on('users');
