@@ -32,6 +32,21 @@
 							<input type="text" class="span6 typeahead" id="typeahead" value="{{ $user->preferred_name }}" name="preferred_name">
 						</div>
 					</div>
+					
+					<div class="box-content">
+					<form class="form-horizontal">
+		        		<label class="control-label" for="typeahead">Gender</label>
+			        	<div class="controls">
+				      		@if($user->gender == 1)
+				            	<input type="radio" name="gender" value="0"> Male<br>
+				            	<input type="radio" name="gender" value="1" checked>Female<br>
+				            @else
+				              	<input type="radio" name="gender" value="0" checked> Male<br>
+				            	<input type="radio" name="gender" value="1"> Female<br>
+				         	@endif
+				    	</div>
+					</form>
+					</div>
 				
 					<div class="control-group">
 				  		<label class="control-label" for="fileInput">Photo Upload</label>
@@ -72,19 +87,7 @@
 		<div class="box-header" data-original-title>
 			<h2><i class="halflings-icon white edit"></i><span class="break"></span>Personal Information</h2>
 		</div>
-		<div class="box-content">
-			<form class="form-horizontal">
-		        <label class="control-label" for="typeahead">Gender</label>
-		        <div class="controls">
-			      	@if($user->gender == 1)
-			            <input type="radio" name="gender" value="0"> Male<br>
-			            <input type="radio" name="gender" value="1" checked>Female<br>
-			            @else
-			              	<input type="radio" name="gender" value="0" checked> Male<br>
-			            	<input type="radio" name="gender" value="1"> Female<br>
-			         @endif
-			    </div>
-		</div>
+
 	    <div class="form-group">
 	        <label class="control-label" for="typeahead">Date of Birth</label>
 	        <div class="controls">
@@ -157,7 +160,6 @@
 	  					<a href="{{ action('HomeController@editProfile') }}" class="btn btn-primary">Edit</a>
 					</div>
 				@endif
-			</form>
 		@endif<!-- student -->
 		</div>
 	</div>

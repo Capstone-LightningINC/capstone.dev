@@ -12,13 +12,13 @@
 				<div class="control-group">
 				  <label class="control-label" for="typeahead">Organization Name</label>
 				  <div class="controls">
-					<input type="text" class="span6 typeahead" id="typeahead" placeholder="National Honor Society">
+					<input type="text" class="span6 typeahead" id="typeahead" placeholder="National Honor Society" name="name">
 				  </div>
 				</div>
 				<div class="control-group">
 				  <label class="control-label" for="typeahead">Position</label>
 				  <div class="controls">
-					<input type="text" class="span6 typeahead" id="typeahead" placeholder="President">
+					<input type="text" class="span6 typeahead" id="typeahead" placeholder="President" name="position">
 				  </div>
 				</div>
 				<div class="control-group">
@@ -40,7 +40,7 @@
 				<div class="control-group hidden-phone">
 				  <label class="control-label" for="textarea2">Description</label>
 				  <div class="controls">
-					<textarea class="cleditor" id="textarea2" placeholder="Write additional details here"></textarea>
+					<textarea class="cleditor" id="textarea2" placeholder="Write additional details here" name="description"></textarea>
 				  </div>
 				</div>
 			
