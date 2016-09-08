@@ -41,4 +41,10 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasOne(PersonalInfo::class, 'student_id');
     }
+    public function mySchools(){
+
+        return $this->belongsToMany('App\School', 'students', 'user_id', 'school_id');
+
+
+    }
 }

@@ -15,7 +15,7 @@
 
   @endforeach
 
-  <div class="pagination"> {!!$schools->render()!!} </div>
+  {{--<div class="pagination"> {!!$schools->render()!!} </div>--}}
 
 
 

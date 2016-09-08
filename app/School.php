@@ -29,8 +29,11 @@ class School extends Model
         }
         return $schools;
     }
-    public static function mySchools(){
-        $mySchools = DB::table('students');
-}
+    public function users(){
+
+        return $this->belongsToMany('App\User', 'students', 'user_id', 'school_id');
+
+
+    }
 
 }

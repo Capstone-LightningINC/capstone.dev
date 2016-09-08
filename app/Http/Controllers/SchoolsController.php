@@ -172,13 +172,12 @@ class SchoolsController extends Controller
         return redirect()->back();
     }
 
-    public function mySchools() {
-        $mySchools = School::mySchools();
-        $mySchools = $mySchools->paginate(10);
-        return view('schools.myschools', ['schools' => $schools]);
+    public function displayMySchools() {
+        $mySchools = Auth::user()->mySchools;
+//        $mySchools = $mySchools->paginate(10);
+        return view('schools.myschools', ['schools' => $mySchools]);
     }
 
-}
 
 
 }
