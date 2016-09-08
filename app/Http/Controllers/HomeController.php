@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Calendar;
 use MaddHatter\LaravelFullcalendar\SimpleEvent;
+use App\Activities;
 
 class HomeController extends Controller
 {
@@ -97,7 +98,8 @@ class HomeController extends Controller
         return view('schools.school', ["school" => $school]);
     }
     public function activities(){
-        return view('schools.activities');
+        $activities = Activities::all();
+        return view('schools.activities', ['activities' => $activities]);
     }
 
 

@@ -21,7 +21,9 @@ class CreateActivitiesTable extends Migration
             ->on('users');
             $activities->string('name');
             $activities->string('position');
+            $activities->string('type');
             $activities->text('description');
+            $activities->timestamps();
         });
     }
 

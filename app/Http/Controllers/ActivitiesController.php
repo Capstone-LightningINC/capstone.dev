@@ -84,11 +84,11 @@ class Activities extends Controller
     {
         $activity = Post::find($id);
         if (!$activity) {
-            session()->flash('message', 'Activity not found')
+            session()->flash('message', 'Activity not found');
         } else {
             $activity->delete();
             session()->flash('message', 'Activity deleted!');
-            return redirect()->action('')
+            return redirect()->action('');
         }
     }
 }

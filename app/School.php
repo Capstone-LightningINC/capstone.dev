@@ -29,6 +29,8 @@ class School extends Model
         }
         return $schools;
     }
-
+    public static function mySchools(){
+        $mySchools = DB::table('students');
+}
 
 }
