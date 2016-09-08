@@ -29,4 +29,16 @@ class PasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    // public function resetPassword() 
+    // {
+    //     if (Hash::check('plain-text', $hashedPassword)) {
+    //         if (Hash::needsRehash($hashed)) {
+    //             $hashed = Hash::make('plain-text');
+    //         }
+
+    //     } else {
+            
+    //     }
+    // }
 }

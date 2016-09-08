@@ -14,12 +14,14 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
         DB::table('events')->delete();
+        DB::table('essays')->delete();
         DB::table('personalInfo')->delete();
         DB::table('schools')->delete();
         DB::table('users')->delete();
         $this->call(UserTableSeeder::class);
         $this->call(SchoolTableSeeder::class);
         $this->call(personalInfoSeeder::class);
+        $this->call(essaySeeder::class);
         $this->call(eventsSeeder::class);
 
         Model::reguard();

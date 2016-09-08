@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +18,7 @@ class EssaysController extends Controller
      public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('counselor');
+        // $this->middleware('counselor');
     }
 
     public function index()

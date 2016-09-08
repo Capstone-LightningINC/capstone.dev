@@ -4,12 +4,7 @@
     <div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header" data-original-title>
-                <h2><i class="halflings-icon white edit"></i><span class="break"></span>Lets write an esssay.</h2>
-                <div class="box-icon">
-                    <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                    <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                    <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                </div>
+                <h2><i class="halflings-icon white edit"></i><span class="break"></span>Let's write an esssay.</h2>
             </div>
             <div class="box-content">
                 <form class="form-horizontal">
