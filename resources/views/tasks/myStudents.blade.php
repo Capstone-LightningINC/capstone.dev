@@ -50,14 +50,14 @@
 
 
 	@foreach($students as $student)
-		<a href="/schools/{{ $student->id }}">
+		<a href="/showStudent/{{ $student->id }}">
 			<div class="col-md-2">
 				<div class="schoolbox">
 					<img src="http://lorempixel.com/460/250/" class="img-responsive">
 					<div class="schooltitle">{{ $student->preferred_name }}</div>
 					<p class="text-justify">{{ $student->authority }}</p>
 					<div class="pull-right"><button class="btn btn-success btn-sm">Student Info</button>
-						<a type="reset" class="btn btn-danger delete" href="{{ action('SchoolsController@deleteMySchools', $student->id) }}">Delete</a>
+						<a type="reset" class="btn btn-danger delete" href="{{ action('HomeController@showStudent', $student->id) }}">Delete</a>
 					</div>
 				</div>
 			</div></a>

@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Student;
 use DateTime;
 use Illuminate\Http\Request;
 use App\User;
@@ -113,7 +114,12 @@ class HomeController extends Controller
 
             //    TASKS   //
     public function myStudents(){
-        return view('tasks.myStudents');
+        $myStudents = User::where('authority', 'student')->where('counselor_name', Auth::user()->name)->get();
+        return view('tasks.myStudents', ['students' => $myStudents]);
+    }
+    public function showStudent($id){
+        $studentInfo = User::find($id);
+        return view('tasks.studentInfo', ["student" => $studentInfo]);
     }
     public function studentTasks(){
         return view('tasks.studentTasks');
