@@ -7,7 +7,7 @@
                 <li><a href="{{ action('HomeController@activities') }}"><i class="icon-star"></i><span class="hidden-tablet"> Activities</span></a></li>
                 <li><a href="{{ action('SchoolsController@displayMySchools') }}"><i class="icon-heart"></i><span class="hidden-tablet"> My Schools</span></a></li>
                 <li><a href="{{ action('HomeController@search') }}"><i class="icon-file"></i><span class="hidden-tablet"> Schools</span></a></li>
-                {{--<li><a href="{{ action('HomeController@studentTasks') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>--}}
+                <li><a href="{{ action('HomeController@writeAnEssay') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> Write an Essay</span></a></li>
                 <li><a href="{{ action('HomeController@myEssays') }}"><i class="icon-folder-open"></i><span class="hidden-tablet"> Essays</span></a></li>
             </ul>
         @else

@@ -30,7 +30,7 @@
                         <div class="control-group hidden-phone">
                             <label class="control-label" for="textarea2">Write here:</label>
                             <div class="controls">
-                                <textarea class="cleditor" id="textarea2" rows="3"></textarea>
+                                <textarea  id="textarea2" rows="3"></textarea>
                             </div>
                         </div>
                         <div class="form-actions">
