@@ -14,7 +14,7 @@
 
         <div class="span8 widget blue" onTablet="span7" onDesktop="span8">
 
-            <div id="stats-chart2"  style="height:282px" >
+            <div id=""  style="height:282px" >
                 <h1>Name of Task: </h1>
                 <h2>Due Date:</h2>
                 <h2>Description:</h2>
@@ -39,7 +39,7 @@
 
         <div class="span8 widget blue" onTablet="span7" onDesktop="span8">
 
-            <div id="stats-chart2"  style="height:282px" >
+            <div id=""  style="height:282px" >
                 <h1>Name of Task: </h1>
                 <h2>Due Date:</h2>
                 <h2>Description:</h2>
@@ -114,7 +114,7 @@
 
             <div class="span8 widget blue" onTablet="span7" onDesktop="span8">
 
-                <div id="stats-chart2"  style="height:282px" >
+                <div id=""  style="height:282px" >
                     <h1>Name of Task: </h1>
                     <h2>Due Date:</h2>
                     <h2>Description:</h2>

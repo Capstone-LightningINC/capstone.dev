@@ -138,8 +138,8 @@ class PersonalInfoController extends Controller
 //        $request = $myActivities->school;
         return redirect()->back();
     }
-    public function deleteMyActivities($id){
-        $activity = Activities::find($id);
+    public function deleteMyActivities($school_id){
+        $activity = Activities::find($school_id);
         $activity->delete();
         return redirect()->back();
     }

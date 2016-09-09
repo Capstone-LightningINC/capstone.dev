@@ -29,6 +29,8 @@ class CreateStudentTable extends Migration
             ->references('id')
             ->on('essays');
 
+            $students->primary(['user_id', 'school_id']);
+
             $students->timestamps();
         });
     }
