@@ -2,8 +2,7 @@
 
 @section('content')
 
- <?php $studentCheck = $user->authority == 'student'; ?>
- <?php $counselorCheck = $user->authority == 'counselor'; ?>
+<?php $studentCheck = $user->authority == 'student'? true : false; ?>
 
 
 <form class="form-horizontal" action="{{ action('UsersController@validateAndSave') }}" method="post">
@@ -106,7 +105,6 @@
 							<input type="text" class="span6 typeahead" id="typeahead" placeholder="Parent 2" value="{{ $user->personalInfo->parent2 }}" name="parent2">
 					  	</div>
 					</div>
-				@endif
 			
 		<div class="box-content">
 			<div class="form-horizontal">
@@ -152,6 +150,7 @@
 							<input type="text" class="span6 typeahead" id="typeahead" placeholder="Biology" value="{{ $user->personalInfo->major3 }}" name="major3">
 					  	</div>
 					</div>
+					@endif
 					<button type="submit" class="btn btn-primary" >Save</button>
 				  </fieldset>
 				</div>   

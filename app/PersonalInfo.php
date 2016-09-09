@@ -16,7 +16,7 @@ class PersonalInfo extends Model
 		'WeChat' => 'string',
 		"parent1" => 'string',
 		"parent2" => 'string',
-		'highSchool' => 'required|string',
+		'highSchool' => 'string',
 		'SAT' => 'integer',
 		'ACT' => 'integer',
 		'TOEFL' => 'integer',

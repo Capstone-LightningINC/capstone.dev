@@ -100,6 +100,7 @@ class PersonalInfoController extends Controller
     }
     public function validateAndSave(Request $request) 
     {
+        // dd($request->all());
         $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
         $this->validate($request, personalInfo::$rules);
         $request->session()->forget('ERROR_MESSAGE');
