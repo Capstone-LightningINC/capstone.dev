@@ -101,7 +101,7 @@
 					<div class="control-group hidden-phone">
 						<label class="control-label" for="textarea2">Description:</label>
 						<div class="controls">
-							<P>{{ $activity->description }}</P>
+							<P>{!!$activity->description!!}</P>
 							{{--<textarea class="cleditor" id="textarea2" placeholder="Write additional details here" name="description"></textarea>--}}
 						</div>
 					</div>
