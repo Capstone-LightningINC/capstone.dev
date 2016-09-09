@@ -14,7 +14,7 @@
                     <tr>
                         <th>School</th>
                         <th>Application Deadline</th>
-                        <th>Essays</th>
+                        <th>Topic</th>
                         <th>Status</th>
                     </tr>
                     </thead>
