@@ -33,7 +33,7 @@ class EssaysController extends Controller
      */
     public function create()
     {
-        //
+        return view('writeAnEssay.profile');
     }
 
     /**
@@ -44,7 +44,11 @@ class EssaysController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, Post::$rules);
+        $essay = new App\Essay();
+        $essay->student_id = Auth::user()->id;
+        $essay->school_id = Auth::essay()->id;
+        return $this->validateAndSave($essay, $request);
     }
 
     /**
@@ -66,7 +70,8 @@ class EssaysController extends Controller
      */
     public function edit($id)
     {
-        //
+        $personalInfo = personalInfo::findOrFail($id);
+        return view('EssayController@editEssay');
     }
 
     /**
@@ -78,7 +83,8 @@ class EssaysController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $essay = essay::findOrFail($id);
+        return $this->validateAndSave($essay, $request);
     }
 
     /**
@@ -90,5 +96,14 @@ class EssaysController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function validateAndSave(Request $request)
+    {
+        $request->session()->flash('ERROR_MESSAGE', 'Essay not saved');
+        $this->validate($request, personalInfo::$rules);
+        $request->session()->forget('ERROR_MESSAGE');
+
+        $essay = Auth::user()->essays;
     }
 }

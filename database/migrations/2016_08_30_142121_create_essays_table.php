@@ -27,7 +27,7 @@ class CreateEssaysTable extends Migration
 
 			$essay->string('topic');             
 			$essay->longText('essay');
-			$essay->integer('word_limit')->nullable;
+			$essay->integer('character_limit')->nullable;
 			$essay->integer('word_count')->nullable;
 			$essay->date('deadline');
 			$essay->enum('status', ['Not Started', 'Pending', 'Submitted', 'Completed', 'Late']);

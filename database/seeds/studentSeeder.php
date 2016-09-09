@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class essaySeeder extends Seeder
+class studentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class essaySeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Essay::class, 20)->create();
+        factory(App\Student::class, 30)->create();
     }
 }
