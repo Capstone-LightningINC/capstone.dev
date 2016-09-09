@@ -169,7 +169,7 @@ class SchoolsController extends Controller
             ]);
 
         $school = $mySchools->school;
-        return redirect()->back();
+        return redirect('/schools/search');
     }
 
     public function displayMySchools() {
