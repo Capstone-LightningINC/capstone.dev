@@ -24,8 +24,13 @@ class CreateStudentTable extends Migration
             ->references('school_id')
             ->on('schools');
 
+            $students->integer('essay_id')->unsigned();
+            $students->foreign('essay_id')
+            ->references('id')
+            ->on('essays');
 
             $students->primary(['user_id', 'school_id']);
+
             $students->timestamps();
         });
     }

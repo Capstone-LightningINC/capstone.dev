@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
         DB::table('events')->delete();
+        DB::table('students')->delete();
         DB::table('essays')->delete();
         DB::table('personalInfo')->delete();
         DB::table('schools')->delete();
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SchoolTableSeeder::class);
         $this->call(personalInfoSeeder::class);
         $this->call(essaySeeder::class);
+        $this->call(studentSeeder::class);
         $this->call(eventsSeeder::class);
 
         Model::reguard();

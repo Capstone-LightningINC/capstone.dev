@@ -36,4 +36,14 @@ class School extends Model
 
     }
 
+    public static function getTopic($value) 
+    {
+
+    }
+
+    public static function setTopic($value)
+    {
+
+    }
+
 }
