@@ -39,10 +39,11 @@ $factory->define(App\Essay::class, function (Faker\Generator $faker) {
     ];
 });
 
-// $factory->define(App\Student::class, function (Faker\Generator $faker) {
-//     return [
-//         'user_id' => App\User::all()->random()->id,
-//         'school_id' => App\School::all()->random()->school_id,
-//         'essay_id' => App\Essay::all()->random()->id
-//     ];
-// });
+$factory->define(App\Student::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => App\User::all()->random()->id,
+        'school_id' => App\School::all()->random()->school_id,
+//        'essay_id' => App\Essay::all()->random()->id
+    ];
+});
+
