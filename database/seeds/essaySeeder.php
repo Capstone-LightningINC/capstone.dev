@@ -11,6 +11,6 @@ class essaySeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Essay::class, 20)->create();
+        // factory(App\Essay::class, 20)->create();
     }
 }
