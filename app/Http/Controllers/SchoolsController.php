@@ -179,6 +179,11 @@ class SchoolsController extends Controller
         return view('schools.myschools', ['schools' => $mySchools]);
     }
 
+    public function deleteMySchools($id){
+        $mySchool = Student::where('school_id', $id)->where('user_id', Auth::user()->id);
+        $mySchool->delete();
+        return redirect()->back();
+    }
 
 
 }

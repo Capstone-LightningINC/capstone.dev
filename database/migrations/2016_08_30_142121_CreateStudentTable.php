@@ -25,7 +25,7 @@ class CreateStudentTable extends Migration
             ->on('schools');
 
 
-//            $students->primary('user_id');
+            $students->primary(['user_id', 'school_id']);
             $students->timestamps();
         });
     }
