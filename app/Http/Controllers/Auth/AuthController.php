@@ -70,7 +70,6 @@ class AuthController extends Controller
         ]);
         $profile = new \App\PersonalInfo;
         $profile->student_id = $user->id;
-        $profile->DOB = $data['DOB'];
         $profile->save();
 
         return $user;

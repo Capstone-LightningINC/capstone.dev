@@ -83,7 +83,7 @@ class HomeController extends Controller
     }
     public function profile($id){
         $user = Auth::user();
-        if (is_null($user->personalInfo)) {
+        if ($user->personalInfo->DOB =='0000-00-00') {
             return view('auth.profileBlank', ['user' => $user]);
         }
         return view('auth.profile', ["user" => $user]);

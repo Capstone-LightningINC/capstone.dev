@@ -7,9 +7,18 @@ use Illuminate\Support\Facades\DB;
 
 class School extends Model
 {
+    
+
     protected $table = 'schools';
 
     public $primaryKey = 'school_id';
+    protected $dates = ['created_at', 'updated_at'];
+ 
+   public static $rules = [
+        
+ 
+ 
+   ];
 
     public function schoolInfo()
 

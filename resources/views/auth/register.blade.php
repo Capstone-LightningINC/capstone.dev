@@ -51,12 +51,6 @@
           Female
         </label>
     </div>
-    <div class="form-group">
-        <label>Date of Birth</label>
-        <div class="col-md-6">
-          <input type="date" id="dob" name="DOB" placeholder="02/16/00" value="{{ isset($user) ? $user->personalInfo->DOB : '' }}">
-        </div>
-    </div>
 
     <div class="form-group">
       <label for="phone">Phone</label>

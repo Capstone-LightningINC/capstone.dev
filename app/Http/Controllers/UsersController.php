@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Schools;
+use App\School;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -99,7 +99,7 @@ class UsersController extends Controller
     {
        
         $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
-        $this->validate($request, Schools::$rules);
+        $this->validate($request, School::$rules);
         $request->session()->forget('ERROR_MESSAGE');
 
         $user = Auth::user();
