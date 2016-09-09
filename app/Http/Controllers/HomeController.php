@@ -62,6 +62,8 @@ class HomeController extends Controller
         return view('dashboards.student', compact('calendar'));
     }
     public function counselorProfile(){
+
+
         return view('dashboards.counselor');
     }
 
