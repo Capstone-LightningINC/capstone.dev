@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d96e1978-ad14-4adb-b409-d30a23dcaa03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalInfoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalInfoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SchoolsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SchoolsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_08_30_142121_CreateStudentTable.php" afterPath="$PROJECT_DIR$/database/migrations/2016_08_30_142121_CreateStudentTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/dashboards/student.blade.php" afterPath="$PROJECT_DIR$/resources/views/dashboards/student.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/schools/activities.blade.php" afterPath="$PROJECT_DIR$/resources/views/schools/activities.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/schools/mySchools.blade.php" afterPath="$PROJECT_DIR$/resources/views/schools/mySchools.blade.php" />
-    </list>
+    <list default="true" id="d96e1978-ad14-4adb-b409-d30a23dcaa03" name="Default" comment="" />
     <ignored path="capstone.dev.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -597,12 +588,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472494913076</updated>
       <workItem from="1472494914417" duration="50210000" />
-      <workItem from="1472759286741" duration="60510000" />
+      <workItem from="1472759286741" duration="60567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110720000" />
+    <option name="totallyTimeSpent" value="110777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
