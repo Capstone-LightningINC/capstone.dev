@@ -48,7 +48,6 @@
 				<div class="form-actions">
 				  <button type="submit" class="btn btn-primary">Save</button>
 				  <button type="reset" class="btn btn-danger delete">Delete</button>
-				  <button type="submit" class="btn btn-info new">New Entry</button>
 				</div>
 
 			  </fieldset>
@@ -108,9 +107,8 @@
 					</div>
 
 					<div class="form-actions">
-						<button type="submit" class="btn btn-primary">Save</button>
+						<button type="submit" class="btn btn-primary">Edit</button>
 						<a type="reset" class="btn btn-danger delete" href="{{ action('PersonalInfoController@deleteMyActivities', ['id' => $activity->id]) }}">Delete</a>
-						<button type="submit" class="btn btn-info new">New Entry</button>
 					</div>
 
 				</fieldset>
