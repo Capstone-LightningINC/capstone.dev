@@ -45,6 +45,17 @@ class User extends Model implements AuthenticatableContract,
 
         return $this->belongsToMany('App\School', 'students', 'user_id', 'school_id');
 
-
     }
+//    public static function gatherMyStudents()
+//    {
+//            $myStudents = self::where("counselor", "LIKE","%$keyword%")
+//                ->orWhere("e_city", "LIKE", "%$keyword%")
+//                ->orWhere("e_state", "LIKE", "%$keyword%")
+//                ->orWhere("c_type", "LIKE", "%$keyword%");
+//        } else {
+//            $schools = DB::table('schools');
+//        }
+//        return $schools;
+//    }
+
 }

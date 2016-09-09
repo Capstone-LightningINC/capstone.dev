@@ -163,7 +163,6 @@ class SchoolsController extends Controller
     }
 
     public function addToMySchools($school_id) {
-//        dd($school_id);
         $mySchools = Student::with('school')->firstOrCreate([
           'user_id' => Auth::user()->id,
             'school_id' => $school_id,

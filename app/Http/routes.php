@@ -50,7 +50,8 @@ Route::get('/deletemyschools/{id}', 'SchoolsController@deleteMySchools');
 
 
 //    TASKS   //
-Route::get('/counselor/myStudents', 'HomeController@myStudents');
+Route::get('myStudents', 'HomeController@myStudents');
+Route::get('showStudent/{id}', 'HomeController@showStudent');
 Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
 Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
 Route::get('/student/myEssays', 'HomeController@myEssays');
