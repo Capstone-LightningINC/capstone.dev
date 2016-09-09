@@ -39,7 +39,7 @@
 			        	<div class="controls">
 				      		@if($user->gender == 1)
 				            	<input type="radio" name="gender" value="0"> Male<br>
-				            	<input type="radio" name="gender" value="1" checked>Female<br>
+				            	<input type="radio" name="gender" value="1" checked> Female<br>
 				            @else
 				              	<input type="radio" name="gender" value="0" checked> Male<br>
 				            	<input type="radio" name="gender" value="1"> Female<br>

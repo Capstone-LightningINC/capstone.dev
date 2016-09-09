@@ -46,3 +46,4 @@ $factory->define(App\Student::class, function (Faker\Generator $faker) {
 //        'essay_id' => App\Essay::all()->random()->id
     ];
 });
+

@@ -10,9 +10,9 @@ class Student extends Model
 
     protected $fillable = ['user_id', 'school_id'];
 
-    public function schools() {
-        return $this->belongsTo('App\Student');
-    }
+    // public function schools() {
+    //     return $this->belongsTo('App\Student');
+    // }
 
 }
 
