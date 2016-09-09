@@ -82,7 +82,7 @@ class HomeController extends Controller
     public function mySchools(){
         return view('schools.mySchools');
     }
-    public function profile(){
+    public function profile($id){
         $user = Auth::user();
         if ($user->personalInfo->DOB =='0000-00-00') {
             return view('auth.profileBlank', ['user' => $user]);
