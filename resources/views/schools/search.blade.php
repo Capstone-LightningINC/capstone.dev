@@ -5,7 +5,7 @@
     <div class="row search">    
         <div class="col-xs-8 col-xs-offset-2">
 		    <div class="input-group search">
-                <div class="input-group-btn search-panel">
+                <!-- <div class="input-group-btn search-panel">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     	<span id="search_concept">Filter by</span> <span class="caret"></span>
                     </button>
@@ -17,13 +17,12 @@
                       <li class="divider"></li>
                       <li><a href="#none">None</a></li>
                     </ul>
-                </div>
-                <input type="hidden" name="search_param" value="all" id="search_param">
+                </div> -->
                <form action="{{ action('HomeController@search') }}">
-                    <input type="text" class="form-control" name="keyword" placeholder="Enter University Name or State">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
-                    </span>
+	                <div class="center">
+	                    <input type="text" class="form-control searchbar" name="keyword" placeholder="Enter University Name or State">
+	                  <button class="btn btn-info search" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
+	                </div>
                </form>
             </div>
         </div>
@@ -36,13 +35,13 @@
       <div class="schoolbox">
         <img src="http://lorempixel.com/460/250/" class="img-responsive">
         <div class="schooltitle">{{ $school->biz_name }}</div>
-        <p class="text-justify">{{ $school->web_url }}</p>
-        <div class="pull-right"><button class="btn btn-success btn-sm">More Info</button></div>
+        <p class="text-justify form-control"><a href="{{ $school->web_url }}" target="_blank">{{ $school->web_url }}</a></p>
+        <div><button class="btn btn-success btn-sm more-info">More Info</button></div>
       </div>
     </div></a>
 
 @endforeach
 
-   <div class="pagination"> {!!$schools->render()!!} </div>
+<div class="pagination"> {!!$schools->render()!!} </div>
 
 @stop

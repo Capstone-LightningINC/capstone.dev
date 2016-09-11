@@ -13,25 +13,25 @@
 				<div class="control-group">
 				  <label class="control-label" for="typeahead">Organization Name</label>
 				  <div class="controls">
-					<input type="text" class="span6 typeahead" id="typeahead" placeholder="National Honor Society" name="name">
+					<input type="text" class="span6 typeahead form-control" placeholder="National Honor Society" name="name">
 				  </div>
 				</div>
 				<div class="control-group">
 				  <label class="control-label" for="typeahead">Position</label>
 				  <div class="controls">
-					<input type="text" class="span6 typeahead" id="typeahead" placeholder="President" name="position">
+					<input type="text" class="span6 typeahead form-control" placeholder="President" name="position">
 				  </div>
 				</div>
 				<div class="control-group">
 				  <label class="control-label" for="date01">Type</label>
 				  <div class="controls">
-					<select name="type">
-			          <option value="clubOrganization">Club or Organization</option>
-			          <option value="sport">Sport</option>
-			          <option value="volunteer">Volunteer Work</option>
-			          <option value="competition">Competition</option>
-			          <option value="award">Award</option>
-			          <option value="job">Job or Internship</option>
+					<select name="type" class="form-control">
+			          <option value="Club/Organization">Club/Organization</option>
+			          <option value="Sport">Sport</option>
+			          <option value="Volunteer">Volunteer Work</option>
+			          <option value="Competition">Competition</option>
+			          <option value="Award">Award</option>
+			          <option value="Job/Internship">Job/Internship</option>
 			          <option value="other">Other</option>
 			        </select>
 				  </div>
@@ -41,14 +41,12 @@
 				<div class="control-group hidden-phone">
 				  <label class="control-label" for="textarea2">Description</label>
 				  <div class="controls">
-					<textarea class="" id="textarea2" placeholder="Write additional details here" name="description"></textarea>
+					<textarea class="form-control" id="textarea2" placeholder="Write additional details here" name="description"></textarea>
 				  </div>
 				</div>
 			
-				<div class="form-actions">
-				  <button type="submit" class="btn btn-primary">Save</button>
-				  <button type="reset" class="btn btn-danger delete">Delete</button>
-				</div>
+				<button type="submit" class="btn btn-primary">Save</button>
+				<button type="reset" class="btn btn-danger delete">Delete</button>
 
 			  </fieldset>
 			</form>
@@ -71,14 +69,14 @@
 						<label class="control-label" for="typeahead">Organization Name:</label>
 						<div class="controls">
 							<P>{{ $activity->name }}</P>
-							{{--<input type="text" class="span6 typeahead" id="typeahead" placeholder="National Honor Society" name="name">--}}
+							{{--<input type="text" class="span6 typeahead form-control" placeholder="National Honor Society" name="name">--}}
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="typeahead">Position:</label>
 						<div class="controls">
 							<P>{{ $activity->position }}</P>
-							{{--<input type="text" class="span6 typeahead" id="typeahead" placeholder="President" name="position">--}}
+							{{--<input type="text" class="span6 typeahead form-control" placeholder="President" name="position">--}}
 						</div>
 					</div>
 					<div class="control-group">
@@ -106,10 +104,8 @@
 						</div>
 					</div>
 
-					<div class="form-actions">
-						<button type="submit" class="btn btn-primary">Edit</button>
-						<a type="reset" class="btn btn-danger delete" href="{{ action('PersonalInfoController@deleteMyActivities', ['id' => $activity->id]) }}">Delete</a>
-					</div>
+					<button type="submit" class="btn btn-primary">Edit</button>
+					<a type="reset" class="btn btn-danger delete" href="{{ action('PersonalInfoController@deleteMyActivities', ['id' => $activity->id]) }}">Delete</a>
 
 				</fieldset>
 			</form>
