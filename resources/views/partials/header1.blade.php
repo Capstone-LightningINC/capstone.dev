@@ -6,7 +6,7 @@
 			{{--<span class="icon-bar"></span>--}}
 			{{--<span class="icon-bar"></span>--}}
 		{{--</a>--}}
-		<a class="brand" href="index.html"><span>CollegeGo</span></a>
+		<a class="brand" href="/"><span>CollegeGo</span></a>
 
 		<!-- start: Header Menu -->
 
