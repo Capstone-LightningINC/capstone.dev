@@ -19,10 +19,10 @@
                     </ul>
                 </div> -->
                <form action="{{ action('HomeController@search') }}">
-                    <input type="text" class="form-control searchbar" name="keyword" placeholder="Enter University Name or State">
-                    <span class="input-group-btn">
-                        <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
-                    </span>
+	                <div class="center">
+	                    <input type="text" class="form-control searchbar" name="keyword" placeholder="Enter University Name or State">
+	                  <button class="btn btn-info search" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
+	                </div>
                </form>
             </div>
         </div>
@@ -35,13 +35,13 @@
       <div class="schoolbox">
         <img src="http://lorempixel.com/460/250/" class="img-responsive">
         <div class="schooltitle">{{ $school->biz_name }}</div>
-        <p class="text-justify"><a href="{{ $school->web_url }}" target="_blank">{{ $school->web_url }}</a></p>
-        <div class="pull-right"><button class="btn btn-success btn-sm">More Info</button></div>
+        <p class="text-justify form-control"><a href="{{ $school->web_url }}" target="_blank">{{ $school->web_url }}</a></p>
+        <div><button class="btn btn-success btn-sm more-info">More Info</button></div>
       </div>
     </div></a>
 
 @endforeach
 
-   <div class="pagination"> {!!$schools->render()!!} </div>
+<div class="pagination"> {!!$schools->render()!!} </div>
 
 @stop

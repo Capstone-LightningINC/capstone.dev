@@ -3096,8 +3096,8 @@ button.btn.btn-success.register {
 .schoolbox {
     background-color:#ffffff;
 	padding:10px;
-	margin:5px 0;
-    border: 1px solid #cfcfcf;
+	margin-bottom: 20px;
+	border: 1px solid #cfcfcf;
     -moz-box-shadow: 2px 2px 4px 0px #cfcfcf;
     -webkit-box-shadow: 2px 2px 4px 0px #cfcfcf;
     -o-box-shadow: 2px 2px 4px 0px #cfcfcf;
@@ -3106,17 +3106,6 @@ button.btn.btn-success.register {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.schooltitle {
-    font-weight:bold;
-    font-size:1.2em;
-	padding:5px 0 5px 0;
-}
-
-.schooltext {
-
-    
 }
 
 div.row-fluid.sortable.activities {
@@ -3146,4 +3135,40 @@ span.hidden-tablet {
 
 a.btn.dropdown-toggle {
 	font-size: 15px;
+}
+
+div.row.search {
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+	font-size: 1em;
+}
+
+input.form-control.searchbar {
+	width: 70%;
+	height: 30px;
+	padding-top: 1px;
+}
+
+button.btn.btn-info.search
+{
+	margin-bottom: 10px;
+}
+img.img-responsive {
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.schooltitle {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+	margin-top: 20px;
+	font-weight:bold;
+}
+div.pagination {
+	margin: auto;
+    width: 50%;
+    padding: 10px;
 }
