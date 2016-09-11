@@ -1,7 +1,7 @@
 @extends('layouts.register')
 @section('content')
-
-<div class="register">
+<body class="login">
+<div class="login">
   <form class="form-horizontal" method="post" action="{{ action('Auth\AuthController@postLogin') }}">
 	{{ csrf_field() }}
 	<div class= "form-group">
@@ -21,13 +21,13 @@
 		  type="password"
 		  class="form-control"
 		  name="password"
-		  id="password">
+		  id="password"><br>
 		  @if ($errors->has('password'))
 			{!! $errors->first('password', '<span class="help-block bg-danger">:message</span>') !!}
 		  @endif
+		<button type="submit" class="btn btn-info pull-right">Login</button>
 	</div>
-	<button type="submit" class="btn btn-info">Login</button>
   </form>
 </div>
-
+</body>
 @stop
