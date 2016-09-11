@@ -16,7 +16,7 @@
             <p class="text-justify"><b>Population:</b> {{ $school->c_pop }}</p>
             <p class="text-justify"><b>Ratio:</b> {{ $school->c_ratio }}</p>
             <p class="text-justify"><b>Type:</b> {{ $school->c_type }}</p>
-            <a href="{{ action("SchoolsController@addToMySchools", ['school_id'=> $school->school_id]) }}"><div class="pull-right"><button class="btn btn-success btn-sm">Add to My Schoools</button></div></a>
+            <a href="{{ action("SchoolsController@addToMySchools", ['school_id'=> $school->school_id]) }}"><div><button class="btn btn-success btn-sm">Add to My Schoools</button></div></a>
         </div>
     </div>
 
