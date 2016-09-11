@@ -3139,4 +3139,11 @@ div.row.search {
 	margin: 0 auto;
 }
 
+span.hidden-tablet {
+	font-size: 1.25em;
+	margin-left: 5px;
+}
 
+a.btn.dropdown-toggle {
+	font-size: 15px;
+}
