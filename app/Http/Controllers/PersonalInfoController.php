@@ -108,7 +108,7 @@ class PersonalInfoController extends Controller
         $personalInfo = Auth::user()->personalInfo;
 
         $personalInfo->DOB = $request->input('DOB');
-        $personalInfo->photo = $request->input('photo');
+        $personalInfo->profile_img = $request->input('profile_img');
         $personalInfo->WeChat = $request->input('WeChat');
         $personalInfo->parent1 = $request->input('parent1');
         $personalInfo->parent2 = $request->input('parent2');
