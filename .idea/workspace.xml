@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d96e1978-ad14-4adb-b409-d30a23dcaa03" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/adams_state_college.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/adams_state_college.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/adelphi_university.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/adelphi_university.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/adler.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/adler.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/adler_graduate.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/adler_graduate.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/adrian_college.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/adrian_college.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/ai_miami_international.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/ai_miami_international.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/alabama_a&amp;m.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/alabama_a&amp;m.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/alabama_state.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/alabama_state.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/schools_img/atsu.jpg" afterPath="$PROJECT_DIR$/public/img/schools_img/atsu.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/tasks/studentInfo.blade.php" afterPath="$PROJECT_DIR$/resources/views/tasks/studentInfo.blade.php" />
     </list>
     <ignored path="capstone.dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="studentInfo.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="studentInfo.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/tasks/studentInfo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -44,12 +52,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="3217" column="12" selection-start-line="3217" selection-start-column="1" selection-end-line="3217" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="45134">
+              <caret line="3226" column="0" selection-start-line="3226" selection-start-column="0" selection-end-line="3226" selection-end-column="0" />
+              <folding>
+                <marker date="1473711568000" expanded="false" signature="7032:7782" ph="data:image/svg+xml" />
+                <marker date="1473711568000" expanded="false" signature="45317:46143" ph="data:image/svg+xml" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,8 +122,8 @@
         <option value="$PROJECT_DIR$/resources/views/schools/search.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_30_142231_CreatePersonalInfoTable.php" />
         <option value="$PROJECT_DIR$/database/seeds/personalInfoSeeder.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/tasks/studentInfo.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -317,12 +328,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472494913076</updated>
       <workItem from="1472494914417" duration="50210000" />
-      <workItem from="1472759286741" duration="79681000" />
+      <workItem from="1472759286741" duration="79809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129891000" />
+    <option name="totallyTimeSpent" value="130019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -796,19 +807,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="3217" column="12" selection-start-line="3217" selection-start-column="1" selection-end-line="3217" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tasks/studentInfo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45134">
+          <caret line="3226" column="0" selection-start-line="3226" selection-start-column="0" selection-end-line="3226" selection-end-column="0" />
+          <folding>
+            <marker date="1473711568000" expanded="false" signature="7032:7782" ph="data:image/svg+xml" />
+            <marker date="1473711568000" expanded="false" signature="45317:46143" ph="data:image/svg+xml" />
+          </folding>
         </state>
       </provider>
     </entry>
