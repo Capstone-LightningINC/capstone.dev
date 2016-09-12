@@ -6,7 +6,7 @@
 			{{--<span class="icon-bar"></span>--}}
 			{{--<span class="icon-bar"></span>--}}
 		{{--</a>--}}
-		<a class="brand" href="index.html"><span>CollegeGo</span></a>
+		<a class="brand" href="/"><span>CollegeGo</span></a>
 
 		<!-- start: Header Menu -->
 
@@ -115,7 +115,7 @@
 			<!-- start: User Dropdown -->
 			<li class="dropdown">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-					<i class="halflings-icon white user"></i>Hello 
+					<i class="halflings-icon white user"></i> 
 					{{ Auth::user()->preferred_name }}
 					<span class="caret"></span>
 				</a>

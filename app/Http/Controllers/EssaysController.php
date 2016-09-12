@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\School;
+use App\Essay;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class EssaysController extends Controller
 {
@@ -44,10 +47,9 @@ class EssaysController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, Post::$rules);
-        $essay = new App\Essay();
-        $essay->student_id = Auth::user()->id;
-        $essay->school_id = Auth::essay()->id;
+        $essay = new Essay();
+
+
         return $this->validateAndSave($essay, $request);
     }
 
@@ -98,12 +100,27 @@ class EssaysController extends Controller
         //
     }
 
-    public function validateAndSave(Request $request)
+    public function topics($schoolId)
+    {
+        $school = School::find($schoolId);
+
+        return view('tasks.topics')->with('school', $school);
+    }
+
+    public function validateAndSave(Essay $essay, Request $request)
     {
         $request->session()->flash('ERROR_MESSAGE', 'Essay not saved');
-        $this->validate($request, personalInfo::$rules);
+        $this->validate($request, Essay::$rules);
         $request->session()->forget('ERROR_MESSAGE');
 
-        $essay = Auth::user()->essays;
+        
+        $essay->student_id = Auth::user()->id;
+        $essay->school_id = $request->school_id;
+        $essay->topic = $request->topic;
+        $essay->essay = $request->essay;
+        $essay->deadline = $request->deadline;
+        $essay->save();
+
+        return redirect()->action("HomeController@myEssays");
     }
 }

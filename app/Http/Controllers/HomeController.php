@@ -125,10 +125,11 @@ class HomeController extends Controller
         return view('tasks.studentTasks');
     }
     public function writeAnEssay(){
-        return view('tasks.writeAnEssay');
+        return view('tasks.writeAnEssay')->with('student', Auth::user());
     }
     public function myEssays(){
-        return view('tasks.myEssays');
+
+        return view('tasks.myEssays')->with('student', Auth::user());
     }
     public function createTasks(){
         return view('tasks.createTasks');

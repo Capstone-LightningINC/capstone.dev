@@ -13,52 +13,24 @@
                     <thead>
                     <tr>
                         <th>School</th>
-                        <th>Application Deadline</th>
+                        <th>Deadline</th>
                         <th>Topic</th>
                         <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach ($student->essays as $essay)
                     <tr>
-                        <td>Dennis Ji</td>
-                        <td class="center">2012/01/01</td>
-                        <td class="center">Member</td>
+
+                        <td>{{ $student->preferred_name }}</td>
+                        <td class="center">{{ $essay->deadline }}</td>
+                        <td class="center">{{ $essay->topicName() }}</td>
                         <td class="center">
-                            <span class="label label-success">Active</span>
+                            <span class="label label-success">{{ $essay->status }}</span>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Dennis Ji</td>
-                        <td class="center">2012/02/01</td>
-                        <td class="center">Staff</td>
-                        <td class="center">
-                            <span class="label label-important">Banned</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dennis Ji</td>
-                        <td class="center">2012/02/01</td>
-                        <td class="center">Admin</td>
-                        <td class="center">
-                            <span class="label">Inactive</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dennis Ji</td>
-                        <td class="center">2012/03/01</td>
-                        <td class="center">Member</td>
-                        <td class="center">
-                            <span class="label label-warning">Pending</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dennis Ji</td>
-                        <td class="center">2012/01/21</td>
-                        <td class="center">Staff</td>
-                        <td class="center">
-                            <span class="label label-success">Active</span>
-                        </td>
-                    </tr>
+                    @endforeach
+                    
                     </tbody>
                 </table>
                 <div class="pagination pagination-centered">

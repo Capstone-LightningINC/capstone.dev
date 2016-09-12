@@ -54,6 +54,8 @@ Route::get('myStudents', 'HomeController@myStudents');
 Route::get('showStudent/{id}', 'HomeController@showStudent');
 Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
 Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
+Route::get('/students/schools/topics/{school_id}', 'EssaysController@topics');
+Route::post('/essays', 'EssaysController@store');
 Route::get('/student/myEssays', 'HomeController@myEssays');
 
 Route::get('/student/activities', 'HomeController@activities');
