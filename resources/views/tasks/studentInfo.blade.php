@@ -5,11 +5,12 @@
 
 
     <div class="col-md-2">
-        <div class="schoolbox">
+        <div class="personalInfoBox">
             <img src="http://lorempixel.com/460/250/" class="img-responsive">
-            <div class="schooltitle">Nickname: {{ $student->preferred_name }}</div>
+            <div class="schooltitle" id="namePadding">{{ $student->preferred_name }}</div>
+            <div class="row-fluid">
             <div class="infoBox">
-            <p class="text-justify"><b>Name:</b> {{ $student->name }}</p>
+            <p class="text-justify"><b>Full Name:</b> {{ $student->name }}</p>
             <p class="text-justify"><b>Gender:</b> {{ $student->gender }}</p>
             <p class="text-justify"><b>Email:</b> {{ $student->email }}</p>
             <p class="text-justify"><b>Phone:</b> {{ $student->phone }}</p>
@@ -26,6 +27,7 @@
             <p class="text-justify"><b>GPA:</b> {{ $student->personalInfo->GPA }}</p>
             {{--<a href="{{ action("SchoolsController@addToMySchools", ['school_id'=> $student->id]) }}"><div class="pull-right"><button class="btn btn-success btn-sm">Add to My Schoools</button></div></a>--}}
             </div>
+             </div>
         </div>
     </div>
 

@@ -3215,13 +3215,30 @@ div.pagination {
 
 
 
-
+#namePadding{
+	padding: 15px;
+}
 
 
 
 .infoBox {
 	float: left;
 	padding: 15px;
-	padding: 15px;
+	align-self: left;
 
+}
+.personalInfoBox {
+	background-color:#ffffff;
+	padding:10px;
+	margin-bottom: 20px;
+	border: 1px solid #cfcfcf;
+	-moz-box-shadow: 2px 2px 4px 0px #cfcfcf;
+	-webkit-box-shadow: 2px 2px 4px 0px #cfcfcf;
+	-o-box-shadow: 2px 2px 4px 0px #cfcfcf;
+	box-shadow: 2px 2px 4px 0px #cfcfcf;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=134, Strength=4);
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
 }
