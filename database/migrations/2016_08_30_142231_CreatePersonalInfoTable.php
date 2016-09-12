@@ -26,9 +26,9 @@ class CreatePersonalInfoTable extends Migration
             $personalInfo->string('parent1')->nullable();
             $personalInfo->string('parent2')->nullable();
             $personalInfo->string('highSchool')->nullable();
-            $personalInfo->integer('SAT')->nullable();
-            $personalInfo->integer('ACT')->nullable();
-            $personalInfo->integer('TOEFL')->nullable();
+            $personalInfo->string('SAT')->nullable()->default('N/A');
+            $personalInfo->string('ACT')->nullable()->default('N/A');
+            $personalInfo->string('TOEFL')->nullable()->default('N/A');
             $personalInfo->double('GPA')->nullable();
             $personalInfo->string('major1')->nullable();
             $personalInfo->string('major2')->nullable();
