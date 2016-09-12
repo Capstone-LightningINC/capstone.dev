@@ -13,7 +13,8 @@
           @endif
             <div class="schooltitle">{{ $school->biz_name }}</div>
           <p class="text-justify form-control"><a href="{{ $school->web_url }}" target="_blank">{{ $school->web_url }}</a></p>
-          <div><button class="btn btn-success btn-sm">More Info</button>
+          <div>
+            <a href="/schools/{{ $school->school_id }}" class="btn btn-success btn-sm">More Info</a>
             <a type="reset" class="btn btn-danger delete" href="{{ action('SchoolsController@deleteMySchools', $school->school_id) }}">Delete</a>
           </div>
         </div>
