@@ -37,8 +37,7 @@
               <img src="/img/schools_img/{{ $school->img_url }}" class="img-responsive">
           @else
               <img src="/img/schools_img/college.jpg" class="img-responsive">
-          @endif
-              <div class="schooltitle">{{ $school->biz_name }}</div>
+          @endif        <div class="schooltitle">{{ $school->biz_name }}</div>
         <p class="text-justify form-control"><a href="{{ $school->web_url }}" target="_blank">{{ $school->web_url }}</a></p>
         <div><button class="btn btn-success btn-sm more-info">More Info</button></div>
       </div>
