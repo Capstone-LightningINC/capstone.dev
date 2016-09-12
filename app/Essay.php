@@ -24,9 +24,4 @@ class Essay extends Model
    		return $this->school->$columnName;
    }
 
-   public function schoolName()
-   {
-      $schoolName = "school" . $this->school;
-      return $this->school->$schoolName;
-   }
 }
