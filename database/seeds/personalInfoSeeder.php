@@ -18,8 +18,8 @@ class personalInfoSeeder extends Seeder
             $personalInfo = new App\PersonalInfo();
             $personalInfo->student_id = $i + 1;
             $personalInfo->DOB = "2000-01-01";
-            $personalInfo->photo = '/img/uploads/avatar'.$i;
             $personalInfo->WeChat = "WeChat".$i;
+            $personalInfo->profile_img = '/img/uploads/avatar'.$i;
             $personalInfo->parent1 = 'Joe Parent';
             $personalInfo->parent2 = 'Joanna Parent';
             $personalInfo->highSchool = 'Jefferson High School';
