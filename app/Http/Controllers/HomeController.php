@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 use Calendar;
 use MaddHatter\LaravelFullcalendar\SimpleEvent;
 use App\Activities;
+use App\Essay;
 
 class HomeController extends Controller
 {

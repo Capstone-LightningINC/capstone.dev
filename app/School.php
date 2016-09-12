@@ -54,5 +54,8 @@ class School extends Model
     {
 
     }
-
+    public function essay()
+    {
+        return $this->hasMany('App\Essay', 'school_id','school_id');
+    }
 }

@@ -22,7 +22,7 @@
                     @foreach ($student->essays as $essay)
                     <tr>
 
-                        <td>{{ $essay->school_id }}</td>
+                        <td>{{ $essay->school->biz_name }}</td>
                         <td class="center">{{ $essay->deadline }}</td>
                         <td class="center">{{ $essay->topicName() }}</td>
                         <td class="center">
