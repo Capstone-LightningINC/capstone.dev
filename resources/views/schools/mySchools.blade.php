@@ -6,8 +6,12 @@
     <a href="/schools/{{ $school->school_id }}">
       <div class="col-md-2">
         <div class="schoolbox">
-          <img src="/img/college.jpg" class="img-responsive">
-          <div class="schooltitle">{{ $school->biz_name }}</div>
+          @if($school->img_url)
+            <img src="/img/schools_img/{{ $school->img_url }}" class="img-responsive">
+          @else
+            <img src="/img/schools_img/college.jpg" class="img-responsive">
+          @endif
+            <div class="schooltitle">{{ $school->biz_name }}</div>
           <p class="text-justify form-control"><a href="{{ $school->web_url }}" target="_blank">{{ $school->web_url }}</a></p>
           <div><button class="btn btn-success btn-sm">More Info</button>
             <a type="reset" class="btn btn-danger delete" href="{{ action('SchoolsController@deleteMySchools', $school->school_id) }}">Delete</a>
