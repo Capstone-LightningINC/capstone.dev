@@ -6,7 +6,7 @@
 
     <div class="col-md-2">
         <div class="schoolbox">
-            <img src="http://lorempixel.com/460/250/" class="img-responsive">
+            <img src="img/school_img {{ $school->img_url }}" class="img-responsive">
             <div class="schooltitle">{{ $school->biz_name }}</div>
             <p class="text-justify">{{ $school->web_url }}</p>
             <p class="text-justify">Address: {{ $school->e_address }}</p>
