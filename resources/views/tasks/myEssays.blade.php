@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<div class="full-height"
     <div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header">
@@ -37,6 +37,7 @@
             </div>
         </div><!--/span-->
     </div><!--/row-->
+</div>
 
 
 
