@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Essay extends Model
 {
       public static $rules = [
@@ -22,6 +23,11 @@ class Essay extends Model
    {	
    		$columnName = "topic" . $this->topic;
    		return $this->school->$columnName;
+   }
+
+
+   public function show() {
+
    }
 
 }

@@ -63,7 +63,8 @@ Route::post('/student/activities', 'HomeController@activities');
 Route::post('/student/activities', 'HomeController@destroy');
 Route::post('/student/activities/add', 'PersonalInfoController@addToMyActivities');
 Route::get('/student/activities/delete{id}', 'PersonalInfoController@deleteMyActivities');
-
+Route::get('/student/calendar', 'HomeController@showCalendar');
+Route::get('/student/showEssays', 'EssaysController@showEssays');
 
 
 Route::get('/counselor/createTasks', 'HomeController@createTasks');

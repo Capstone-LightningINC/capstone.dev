@@ -35,7 +35,8 @@ class PersonalInfo extends Model
  	{
  		$this->attributes['name'] = strip_tags($value['name']);
  		$this->attributes['preferred_name'] = strip_tags($value['preferred_name']);
- 		$this->attributes['parent1'] = strip_tags($value['parent1']);
+        $this->attributes['profile_img'] = strip_tags($value['profile_img']);
+        $this->attributes['parent1'] = strip_tags($value['parent1']);
  		$this->attributes['parent2'] = strip_tags($value['parent2']);
  		$this->attributes['highSchool'] = strip_tags($value['highSchool']);
  		$this->attributes['SAT'] = strip_tags($value['SAT']);
@@ -50,7 +51,7 @@ class PersonalInfo extends Model
 
  	public function user()
  	{
- 		return $this->belongsTo(User::class, 'id');
+ 		return $this->belongsTo(User::class, 'id', 'profile_img');
  	}
 
 
