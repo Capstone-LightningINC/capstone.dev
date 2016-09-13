@@ -41,8 +41,6 @@ class School extends Model
     public function users(){
 
         return $this->belongsToMany('App\User', 'students', 'user_id', 'school_id');
-
-
     }
 
     public static function getTopic($value) 

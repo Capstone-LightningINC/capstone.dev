@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<div class="full-height">
     @foreach($essays as $essay)
         <div class="row-fluid sortable activities h-scroll">
             <div class="box span12">
@@ -48,7 +48,7 @@
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/js/modals.js"></script>
-
+</div>
 @stop
 
 
