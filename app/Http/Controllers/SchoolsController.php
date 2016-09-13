@@ -176,7 +176,7 @@ class SchoolsController extends Controller
     public function displayMySchools() {
         $mySchools = Auth::user()->mySchools;
 //        $mySchools = $mySchools->paginate(10);
-        return view('schools.myschools', ['schools' => $mySchools]);
+        return view('schools.mySchools', ['schools' => $mySchools]);
     }
 
     public function deleteMySchools($id){

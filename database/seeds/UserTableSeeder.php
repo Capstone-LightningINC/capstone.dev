@@ -27,18 +27,18 @@ class UserTableSeeder extends Seeder
         $user->remember_token = str_random(10);
         $user->save();
 
-        $user = new App\User();
-        $user->name = 'Emily Rodriguez';
-        $user->preferred_name = 'Emily';
-        $user->gender = 1;
-        $user->email = 'rodriguez.emily1993@gmail.com';
-        $user->password = bcrypt("password");
-        $user->phone = '15558675309';
-        $user->authority = 'student';
-        $user->company = "Lightning Inc";
-        $user->counselor_name = "Phillip Garcia";
-        $user->remember_token = str_random(10);
-        $user->save();
+//        $user = new App\User();
+//        $user->name = 'Emily Rodriguez';
+//        $user->preferred_name = 'Emily';
+//        $user->gender = 1;
+//        $user->email = 'rodriguez.emily1993@gmail.com';
+//        $user->password = bcrypt("password");
+//        $user->phone = '15558675309';
+//        $user->authority = 'student';
+//        $user->company = "Lightning Inc";
+//        $user->counselor_name = "Phillip Garcia";
+//        $user->remember_token = str_random(10);
+//        $user->save();
 
 
     }

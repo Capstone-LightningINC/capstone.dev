@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use App\PersonalInfo;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -68,7 +69,7 @@ class AuthController extends Controller
             'authority' => $data['authority'],
             'counselor_name' => $data['counselor_name'],
         ]);
-        $profile = new \App\PersonalInfo;
+        $profile = new PersonalInfo();
         $profile->student_id = $user->id;
         $profile->save();
 
