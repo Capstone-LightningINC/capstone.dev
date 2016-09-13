@@ -15,36 +15,20 @@
                         <fieldset>
                             <div class="control-group">
                                 <div class="controls">
-                                    <P>School: {{ $essay->school_id }}</P>
+                                    <P><b>School:</b> {{ $essay->school->biz_name }}</P>
                                     {{--<input type="text" class="span6 typeahead form-control" placeholder="National Honor Society" name="name">--}}
                                 </div>
                             </div>
                             <div class="control-group">
 
                                 <div class="controls">
-                                    <P>{{ $essay->topic }}</P>
+                                    <P><b>Topic: </b>{{ $essay->topic }}</P>
                                     {{--<input type="text" class="span6 typeahead form-control" placeholder="President" name="position">--}}
                                 </div>
                             </div>
-                            <div class="control-group">
-
-                                <div class="controls">
-                                    {{--<P>{{ $essay->essay }}</P>--}}
-                                    {{--<select name="type">--}}
-                                    {{--<option value="clubOrganization">Club/Organization</option>--}}
-                                    {{--<option value="sport">Sport</option>--}}
-                                    {{--<option value="volunteer">Volunteer Work</option>--}}
-                                    {{--<option value="competition">Competition</option>--}}
-                                    {{--<option value="award">Award</option>--}}
-                                    {{--<option value="job">Job/Internship</option>--}}
-                                    {{--<option value="other">Other</option>--}}
-                                    {{--</select>--}}
-                                </div>
-                            </div>
-
 
                             <div class="control-group hidden-phone">
-                                <label class="control-label" for="textarea2">Essay:</label>
+                                <label class="control-label" for="textarea2"><b>Essay: </b></label>
                                 <div class="controls">
                                     <P>{!!$essay->essay!!}</P>
                                     {{--<textarea class="cleditor" id="textarea2" placeholder="Write additional details here" name="description"></textarea>--}}
