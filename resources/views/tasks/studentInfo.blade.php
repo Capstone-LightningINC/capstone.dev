@@ -6,7 +6,7 @@
 
     <div class="col-md-2">
         <div class="personalInfoBox">
-            <img src="http://lorempixel.com/460/250/" class="img-responsive">
+            <img src="/img/profile_img/{{ $student->profile_img }}" class="img-responsive">
             <div class="schooltitle" id="namePadding">{{ $student->preferred_name }}</div>
             <div class="row-fluid">
             <div class="infoBox">

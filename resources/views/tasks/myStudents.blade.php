@@ -53,7 +53,9 @@
 		<a href="/showStudent/{{ $student->id }}">
 			<div class="col-md-2">
 				<div class="schoolbox">
-					<img src="/img/boy.jpg" class="img-responsive">
+					@if ($student->personalInfo)
+						<img src="/img/profile_img/{{ $student->personalInfo->profile_img }}" class="img-responsive">
+					@endif
 					<div class="schooltitle">{{ $student->preferred_name }}</div>
 					<p class="text-justify">{{ $student->authority }}</p>
 					<div><button class="btn btn-success btn-sm">Student Info</button>

@@ -123,4 +123,8 @@ class EssaysController extends Controller
 
         return redirect()->action("HomeController@myEssays");
     }
+    public function showEssays(){
+        $essays = Essay::where('student_id', Auth::user()->id)->get();
+        return view('tasks.showEssays', ['essays' => $essays]);
+    }
 }

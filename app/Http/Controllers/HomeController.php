@@ -135,4 +135,11 @@ class HomeController extends Controller
     public function createTasks(){
         return view('tasks.createTasks');
     }
+    public function showCalendar(){
+        return view('tasks.calendar');
+    }
+    public function showEssays(){
+        $essays = Essays::all();
+        return view('tasks.showEssays', ['essays' => $essays]);
+    }
 }
