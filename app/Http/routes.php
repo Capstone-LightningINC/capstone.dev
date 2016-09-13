@@ -18,11 +18,16 @@ Route::get('/student', 'HomeController@studentProfile');
 Route::get('/counselor', 'HomeController@counselor');
 Route::get('/counselor/myStudents', 'HomeController@myStudents');
 
+
+
 // PROFILE //
 Route::get('/profile/{id}', 'HomeController@profile');
 Route::get('/profile/{student_id}/edit', 'HomeController@editProfile');
 Route::post('/save/profile', 'PersonalInfoController@validateAndSave');
 Route::post('/save/user', 'UsersController@validateAndSave');
+
+
+
 
 
 //    AUTHORIZE   //
@@ -31,9 +36,15 @@ Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
+
+
+
 //    REGISTER   //
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+
 
 
 
@@ -45,6 +56,9 @@ Route::get('/schools/{id}', 'HomeController@school');
 Route::get('myschools/{school_id}', 'SchoolsController@addToMySchools');
 Route::get('/showschools', 'SchoolsController@displayMySchools');
 Route::get('/deletemyschools/{id}', 'SchoolsController@deleteMySchools');
+
+
+
 
 
 
