@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+<div class="full-height">
     <div class="col-md-2">
         <div class="personalInfoBox">
             <img src="/img/profile_img/{{ $student->profile_img }}" class="img-responsive">
@@ -30,13 +30,11 @@
             <p class="text-justify"><b>ACT:</b> {{ $student->personalInfo->ACT }}</p>
             <p class="text-justify"><b>TOEFL:</b> {{ $student->personalInfo->TOEFL }}</p>
             <p class="text-justify"><b>GPA:</b> {{ $student->personalInfo->GPA }}</p>
-            {{--<a href="{{ action("SchoolsController@addToMySchools", ['school_id'=> $student->id]) }}"><div class="pull-right"><button class="btn btn-success btn-sm">Add to My Schoools</button></div></a>--}}
             </div>
              </div>
         </div>
     </div>
-
-
+</div>
 
 
 
