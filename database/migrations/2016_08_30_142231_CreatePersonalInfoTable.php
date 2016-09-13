@@ -22,7 +22,7 @@ class CreatePersonalInfoTable extends Migration
 
             $personalInfo->date('DOB');
             $personalInfo->string('WeChat')->unique()->nullable();
-            $personalInfo->string('profile_img')->unique();
+            $personalInfo->string('profile_img')->nullable();
             $personalInfo->string('parent1')->nullable();
             $personalInfo->string('parent2')->nullable();
             $personalInfo->string('highSchool')->nullable();
