@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+<div class="full-height">
 <div class="row-fluid sortable activities h-scroll">
 	<div class="box span12">
 		<div class="box-header" data-original-title>
@@ -117,7 +118,7 @@
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="/js/modals.js"></script>
-
+</div>
 @stop
 
 
