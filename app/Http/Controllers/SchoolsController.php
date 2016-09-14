@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Student;
+use App\User;
 
 class SchoolsController extends Controller
 {
@@ -175,7 +176,7 @@ class SchoolsController extends Controller
     public function displayMySchools() {
         $mySchools = Auth::user()->mySchools;
 //        $mySchools = $mySchools->paginate(10);
-        return view('schools.myschools', ['schools' => $mySchools]);
+        return view('schools.mySchools', ['schools' => $mySchools]);
     }
 
     public function deleteMySchools($id){

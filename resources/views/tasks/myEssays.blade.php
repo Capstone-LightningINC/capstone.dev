@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="full-height"
+<div class="full-height">
     <div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header">
@@ -24,7 +24,9 @@
                      <tr>
                         <td>{{ $essay->school->biz_name }}</td>
                         <td class="center">{{ $essay->deadline }}</td>
-                        <td class="center">{{ $essay->topicName() }}</td>
+
+                            <td class="center">{{ $essay->topicName() }}</td>
+                       
                          <td><a href="/student/showEssays">View Essay</a></td>
                         <td class="center">
                             <span class="label label-success">{{ $essay->status }}</span>
