@@ -54,7 +54,7 @@
 			<div class="col-md-2">
 				<div class="schoolbox">
 					@if ($student->personalInfo)
-						<img src="/img/profile_img/{{ $student->personalInfo->profile_img }}" class="img-student">
+						<img src="/img/profile_img/{{ $student->personalInfo->profile_img }}" class="img-responsive">
 					@endif
 					<div class="schooltitle">{{ $student->preferred_name }}</div>
 					<p class="text-justify">{{ $student->authority }}</p>
