@@ -62,7 +62,7 @@
 						<div class="schooltitle">{{ $student->preferred_name }}</div>
 						<p class="text-justify">{{ $student->authority }}</p>
 						<div><button class="btn btn-success btn-sm">Student Info</button>
-							<a type="reset" class="btn btn-danger delete" href="{{ action('HomeController@showStudent', $student->id) }}">Delete</a>
+							{{--<a type="reset" class="btn btn-danger delete" href="{{ action('HomeController@showStudent', $student->id) }}">Delete</a>--}}
 						</div>
 					</div>
 				</div>
