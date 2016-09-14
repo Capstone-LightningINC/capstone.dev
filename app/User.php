@@ -51,7 +51,7 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('App\Essay', 'student_id', 'id');
     }
-
+    
 //    public static function gatherMyStudents()
 //    {
 //            $myStudents = self::where("counselor", "LIKE","%$keyword%")
