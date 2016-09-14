@@ -72,8 +72,8 @@ class EssaysController extends Controller
      */
     public function edit($id)
     {
-        $personalInfo = personalInfo::findOrFail($id);
-        return view('EssayController@editEssay');
+        // $personalInfo = personalInfo::findOrFail($id);
+        // return view('EssayController@editEssay');
     }
 
     /**
@@ -97,7 +97,14 @@ class EssaysController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $essay = Post::find($id);
+        // if (!$essay) {
+        //     session()->flash('message', 'Essay not found');
+        // } else {
+        //     $essay->delete();
+        //     session()->flash('message', 'Essay deleted!');
+        //     return redirect()->action('');
+        // }
     }
 
     public function topics($schoolId)
@@ -123,8 +130,16 @@ class EssaysController extends Controller
 
         return redirect()->action("HomeController@myEssays");
     }
-    public function showEssays(){
+    public function showEssays()
+    {
         $essays = Essay::where('student_id', Auth::user()->id)->get();
         return view('tasks.showEssays', ['essays' => $essays]);
+    }
+
+    public function deleteEssay($id) 
+    {
+        $essay = Essay::find($id);
+        $essay->delete();
+        return redirect()->back();
     }
 }
