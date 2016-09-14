@@ -3207,9 +3207,19 @@ div.pagination {
 
 
 
+.student-pic {
+	max-width:300px;
+	max-height:500px;
+	width: auto;
+	height: auto;
+	float: left;
+	margin-right:20%;
 
+}
 
-
+.nameAndInfoDiv{
+	margin-top: 20%;
+}
 
 
 
