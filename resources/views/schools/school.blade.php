@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+<div class="full-height">
     <div class="col-md-2">
         <div class="schoolbox">
             @if($school->img_url)
@@ -26,6 +26,7 @@
             @endif
         </div>
     </div>
+</div>
 
 
 

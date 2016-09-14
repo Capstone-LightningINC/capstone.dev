@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+<div class="full-height">
 <div class="container">
     <div class="row search">    
         <div class="col-xs-8 col-xs-offset-2">
@@ -49,5 +50,5 @@
 @endforeach
 
 <div class="pagination"> {!!$schools->render()!!} </div>
-
+</div>
 @stop

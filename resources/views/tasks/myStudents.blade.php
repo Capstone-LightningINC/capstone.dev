@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-
+<div class="full-height">
 	{{--<div class="box black span4" onTablet="span6" onDesktop="span4">--}}
 	{{--<div class="box-header">--}}
 		{{--<h2><i class="halflings-icon white user"></i><span class="break"></span>My Students</h2>--}}
@@ -65,7 +65,7 @@
 			</div></a>
 
 	@endforeach
-
+</div>
 
 
 

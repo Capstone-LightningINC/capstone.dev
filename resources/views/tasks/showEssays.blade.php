@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
 <div class="full-height">
     @foreach($essays as $essay)
         <div class="row-fluid sortable activities h-scroll">
