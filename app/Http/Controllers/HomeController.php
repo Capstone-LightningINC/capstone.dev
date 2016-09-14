@@ -26,6 +26,9 @@ class HomeController extends Controller
     }
 
     public function index(){
+        if(Auth::check()){
+            return redirect()->action('HomeController@profile');
+        }
         return view('home');
     }
 
