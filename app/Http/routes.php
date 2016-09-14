@@ -21,7 +21,7 @@ Route::get('/counselor/myStudents', 'HomeController@myStudents');
 
 
 // PROFILE //
-Route::get('/profile/{id}', 'HomeController@profile');
+Route::get('/profile', 'HomeController@profile');
 Route::get('/profile/{student_id}/edit', 'HomeController@editProfile');
 Route::post('/save/profile', 'PersonalInfoController@validateAndSave');
 Route::post('/save/user', 'UsersController@validateAndSave');
