@@ -3247,4 +3247,5 @@ div.pagination {
 
 div.full-height {
 	height: 100vh;
+	overflow: scroll;
 }

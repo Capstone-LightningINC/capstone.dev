@@ -4,7 +4,7 @@
 
 <?php $studentCheck = $user->authority == 'student'? true : false; ?>
 
-
+<div class="full-height">
 <form class="form-horizontal" action="{{ action('UsersController@validateAndSave') }}" method="post">
 {{ csrf_field() }}
 	<div class="row-fluid sortable">
@@ -159,5 +159,5 @@
 </div>
   </fieldset>
 </form>
-
+</div>
 @stop

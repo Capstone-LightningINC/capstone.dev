@@ -4,7 +4,9 @@
 
  <?php $infoCheck = !is_null($user->personalInfo); ?>
  <?php $studentCheck = $user->authority == 'student'? true : false; ?>
+
 @if ($infoCheck)
+<div class="full-height">
 <form class="form-horizontal" method="post" action="{{ action('HomeController@profile') }}">
 {{ csrf_field() }}
 
@@ -156,5 +158,6 @@
 		</div>
 	</div>
 </form>
+</div>
 @endif
 @stop
