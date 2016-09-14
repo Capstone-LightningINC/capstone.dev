@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\personalInfo;
+use App\PersonalInfo;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -47,7 +47,7 @@ class PersonalInfoController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, Post::$rules);
-        $personalInfo = new App\personalInfo();
+        $personalInfo = new App\PersonalInfo();
         $personalInfo->student_id = Auth::user()->id;
         return $this->validateAndSave($post, $request);
     }
@@ -71,7 +71,7 @@ class PersonalInfoController extends Controller
      */
     public function edit($id)
     {
-        $personalInfo = personalInfo::findOrFail($id);
+        $personalInfo = PersonalInfo::findOrFail($id);
         return view('HomeController@editProfile');
     }
 
@@ -84,7 +84,7 @@ class PersonalInfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $personalInfo = personalInfo::findOrFail($id);
+        $personalInfo = PersonalInfo::findOrFail($id);
         return $this->validateAndSave($personalInfo, $request);
     }
 
@@ -102,7 +102,7 @@ class PersonalInfoController extends Controller
     {
         // dd($request->all());
         $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
-        $this->validate($request, personalInfo::$rules);
+        $this->validate($request, PersonalInfo::$rules);
         $request->session()->forget('ERROR_MESSAGE');
 
         $personalInfo = Auth::user()->personalInfo;
