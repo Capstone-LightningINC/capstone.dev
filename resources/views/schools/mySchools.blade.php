@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="full-height">
   @foreach($schools as $school)
     <a href="/schools/{{ $school->school_id }}">
       <div class="col-md-2">
@@ -21,4 +22,5 @@
       </div></a>
 
   @endforeach
+</div>
 @stop
