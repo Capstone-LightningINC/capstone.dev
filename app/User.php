@@ -47,6 +47,11 @@ class User extends Model implements AuthenticatableContract,
 
     }
 
+    public function alreadyExists($school_id)
+    {
+        return $this->mySchools()->where('schools.school_id', $school_id)->get()->count() > 0;
+    }
+
     public function essays()
     {
         return $this->hasMany('App\Essay', 'student_id', 'id');
