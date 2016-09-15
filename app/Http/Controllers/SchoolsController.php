@@ -164,10 +164,15 @@ class SchoolsController extends Controller
     }
 
     public function addToMySchools($school_id) {
+
+        if (Auth::user()->alreadyExists($school_id)) {
+            return redirect('/schools/search');
+        }
+
         $mySchools = Student::with('school')->firstOrCreate([
-          'user_id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'school_id' => $school_id,
-            ]);
+        ]);
 
         $school = $mySchools->school;
         return redirect('/schools/search');

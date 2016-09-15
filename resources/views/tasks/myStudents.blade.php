@@ -52,26 +52,27 @@
 	@foreach($students as $student)
 		<a href="/showStudent/{{ $student->id }}">
 			<div class="col-md-2">
-				<div class="schoolbox">
-					@if ($student->personalInfo)
-						<img src="/img/profile_img/{{ $student->personalInfo->profile_img }}" class="img-responsive">
-					@endif
-					<div class="schooltitle">{{ $student->preferred_name }}</div>
-					<p class="text-justify">{{ $student->authority }}</p>
-					<div><button class="btn btn-success btn-sm">Student Info</button>
-						<a type="reset" class="btn btn-danger delete" href="{{ action('HomeController@showStudent', $student->id) }}">Delete</a>
+				<div class="schoolbox row-fluid">
+					<div class="col-md-1">
+						@if ($student->personalInfo)
+							<img src="/img/profile_img/{{ $student->personalInfo->profile_img }}" class="img-responsive student-pic" >
+						@endif
+					</div>
+					<div class="nameAndInfoDiv">
+						<div class="schooltitle">{{ $student->preferred_name }}</div>
+						<p class="text-justify">{{ $student->authority }}</p>
+						<div><button class="btn btn-success btn-sm">Student Info</button>
+							{{--<a type="reset" class="btn btn-danger delete" href="{{ action('HomeController@showStudent', $student->id) }}">Delete</a>--}}
+						</div>
 					</div>
 				</div>
 			</div></a>
 
 	@endforeach
-<<<<<<< HEAD
-</div>
-
-=======
 
 </div>
->>>>>>> 180baa130bd5910d0008c9c7342d31a5467b66b1
+
+
 
 
 
