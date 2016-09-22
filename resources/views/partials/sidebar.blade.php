@@ -9,8 +9,8 @@
                     <li><a href="{{ action('SchoolsController@displayMySchools') }}"><i class="icon-heart"></i><span class="hidden-tablet"> My Schools</span></a></li>
                 @endif
                 <li><a href="{{ action('HomeController@search') }}"><i class="icon-file"></i><span class="hidden-tablet"> Schools</span></a></li>
-                <li><a href="{{ action('HomeController@writeAnEssay') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> Write an Essay</span></a></li>
-                <li><a href="{{ action('HomeController@myEssays') }}"><i class="icon-folder-open"></i><span class="hidden-tablet"> Essays</span></a></li>
+                <li><a href="{{ action('EssaysController@writeAnEssay') }}"><i class="icon-tasks"></i><span class="hidden-tablet"> Write an Essay</span></a></li>
+                <li><a href="{{ action('EssaysController@myEssays') }}"><i class="icon-folder-open"></i><span class="hidden-tablet"> Essays</span></a></li>
             </ul>
         @else
             <ul class="nav nav-tabs nav-stacked main-menu">

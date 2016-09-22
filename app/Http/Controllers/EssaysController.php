@@ -128,7 +128,7 @@ class EssaysController extends Controller
         $essay->deadline = $request->deadline;
         $essay->save();
 
-        return redirect()->action("HomeController@myEssays");
+        return redirect()->action("EssaysController@myEssays");
     }
     public function showEssays()
     {
@@ -141,5 +141,18 @@ class EssaysController extends Controller
         $essay = Essay::find($id);
         $essay->delete();
         return redirect()->back();
+    }
+    public function writeAnEssay()
+    {
+        return view('tasks.writeAnEssay')->with('student', Auth::user());
+    }
+    public function myEssays()
+    {
+        return view('tasks.myEssays')->with('student', Auth::user());
+    }
+
+    public function displayEssays(){
+        $essays = Essays::all();
+        return view('tasks.showEssays', ['essays' => $essays]);
     }
 }

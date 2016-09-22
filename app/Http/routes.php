@@ -62,10 +62,10 @@ Route::get('/student/showEssays/delete{id}', 'EssaysController@deleteEssay');
 Route::get('/counselor/createTasks', 'HomeController@createTasks');
 
 // ESSAYS
-Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
+Route::get('/student/writeAnEssay', 'EssaysController@writeAnEssay');
 Route::get('/students/schools/topics/{school_id}', 'EssaysController@topics');
 Route::post('/essays', 'EssaysController@store');
-Route::get('/student/myEssays', 'HomeController@myEssays');
+Route::get('/student/myEssays', 'EssaysController@myEssays');
 
 // ACTIVITIES 
 Route::get('/student/activities', 'ActivitiesController@activities');
