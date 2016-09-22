@@ -126,22 +126,4 @@ class PersonalInfoController extends Controller
             'SUCCESS_MESSAGE', 'Update saved');
         return redirect()->action('HomeController@profile');
     }
-    public function addToMyActivities(Request $request) {
-
-        $myActivities = Activities::with('activity')->firstOrCreate([
-            'student_id' => Auth::user()->id,
-            'name' => $request->input('name'),
-            'position' => $request->input('position'),
-            'type' => $request->input('type'),
-            'description' => $request->input('description'),
-        ]);
-
-//        $request = $myActivities->school;
-        return redirect()->back();
-    }
-    public function deleteMyActivities($school_id){
-        $activity = Activities::find($school_id);
-        $activity->delete();
-        return redirect()->back();
-    }
 }

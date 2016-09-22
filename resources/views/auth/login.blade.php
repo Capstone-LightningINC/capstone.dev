@@ -1,6 +1,7 @@
 @extends('layouts.register')
 @section('content')
 <body class="login">
+<div class="full-height">
 <div class="login">
   <form class="form-horizontal" method="post" action="{{ action('Auth\AuthController@postLogin') }}">
 	{{ csrf_field() }}
@@ -28,6 +29,7 @@
 		<button type="submit" class="btn btn-info pull-right">Login</button>
 	</div>
   </form>
+</div>
 </div>
 </body>
 @stop

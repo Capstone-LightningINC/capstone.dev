@@ -2,6 +2,7 @@
 
 @section('content')
 <body class="welcome">
+<div class="full-height">
 	<div class="container" style="margin-top:5%;">
 		<div class="row welcome">
 	      <h1 class="text-center welcome" alt="welcome image">Welcome</h1>
@@ -12,5 +13,6 @@
 	  		</div></center>
 		</div>
 	</div>
+</div>
 </body>
 @stop

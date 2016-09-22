@@ -109,10 +109,6 @@ class HomeController extends Controller
         $school = School::find($id);
         return view('schools.school', ["school" => $school]);
     }
-    public function activities(){
-        $activities = Activities::all();
-        return view('schools.activities', ['activities' => $activities]);
-    }
 
 
 

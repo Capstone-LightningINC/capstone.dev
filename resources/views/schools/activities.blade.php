@@ -8,7 +8,7 @@
 			<h2><i class="halflings-icon white edit"></i><span class="break"></span></h2>
 		</div>
 		<div class="box-content">
-			<form class="form-horizontal" method="post" action="{{ action('PersonalInfoController@addToMyActivities') }}">
+			<form class="form-horizontal" method="post" action="{{ action('ActivitiesController@addToMyActivities') }}">
 			  {{ csrf_field() }}
 				<fieldset>
 				<div class="control-group">
@@ -63,7 +63,7 @@
 			<h2><i class="halflings-icon white edit"></i><span class="break"></span></h2>
 		</div>
 		<div class="box-content">
-			<form class="form-horizontal" method="post" action="{{ action('PersonalInfoController@addToMyActivities') }}">
+			<form class="form-horizontal" method="post" action="{{ action('ActivitiesController@addToMyActivities') }}">
 				{{ csrf_field() }}
 				<fieldset>
 					<div class="control-group">
@@ -105,8 +105,8 @@
 						</div>
 					</div>
 
-					<button type="submit" class="btn btn-primary">Edit</button>
-					<a type="reset" class="btn btn-danger delete" href="{{ action('PersonalInfoController@deleteMyActivities', ['id' => $activity->id]) }}">Delete</a>
+					<a href="{{ action('ActivitiesController@editMyActivities') }}" class="btn btn-primary">Edit</a>
+					<a type="reset" class="btn btn-danger delete" href="{{ action('ActivitiesController@deleteMyActivities', ['id' => $activity->id]) }}">Delete</a>
 
 				</fieldset>
 			</form>
@@ -115,9 +115,6 @@
 </div>
 
 @endforeach
-
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="/js/modals.js"></script>
 
 </div>
 @stop
