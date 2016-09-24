@@ -43,8 +43,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 //    SCHOOLS   //
 
 Route::get('/student/{id}/mySchools', 'SchoolsController@mySchools');
-Route::get('/schools/search', 'HomeController@search');
-Route::get('/schools/{id}', 'HomeController@school');
+Route::get('/schools/search', 'SchoolsController@search');
+Route::get('/schools/{id}', 'SchoolsController@school');
 Route::get('myschools/{school_id}', 'SchoolsController@addToMySchools');
 Route::get('/showschools', 'SchoolsController@displayMySchools');
 Route::get('/deletemyschools/{id}', 'SchoolsController@deleteMySchools');

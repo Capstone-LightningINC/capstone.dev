@@ -98,6 +98,7 @@ class HomeController extends Controller
         return view('auth.editProfile', ['user' => $user]);
     }
 
+
     public function search(Request $request){
         $keyword = $request->input('keyword');
         $schools = School::SearchByKeyword($keyword);
@@ -108,6 +109,7 @@ class HomeController extends Controller
 
         $school = School::find($id);
         return view('schools.school', ["school" => $school]);
+
     }
 
 
