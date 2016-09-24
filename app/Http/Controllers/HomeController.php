@@ -98,17 +98,6 @@ class HomeController extends Controller
         return view('auth.editProfile', ['user' => $user]);
     }
 
-    public function search(Request $request){
-        $keyword = $request->input('keyword');
-        $schools = School::SearchByKeyword($keyword);
-        $schools = $schools->paginate(10);
-        return view('schools.search', ['schools' => $schools]);
-    }
-    public function school($id){
-
-        $school = School::find($id);
-        return view('schools.school', ["school" => $school]);
-    }
     public function activities(){
         $activities = Activities::all();
         return view('schools.activities', ['activities' => $activities]);

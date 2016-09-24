@@ -19,7 +19,7 @@
                       <li><a href="#none">None</a></li>
                     </ul>
                 </div> -->
-               <form action="{{ action('HomeController@search') }}">
+               <form action="{{ action('SchoolsController@search') }}">
 	                <div class="center">
 	                    <input type="text" class="form-control searchbar" name="keyword" placeholder="Enter University Name or State">
 	                  <button class="btn btn-info search" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>

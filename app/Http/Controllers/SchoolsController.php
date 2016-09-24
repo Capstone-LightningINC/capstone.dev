@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Student;
 use App\User;
+use App\School;
 
 class SchoolsController extends Controller
 {
@@ -124,14 +125,14 @@ class SchoolsController extends Controller
         }
     }
 
-    public function search(Post $schools, Request $request) 
-    {
-        $searchQuery = $request->input('search');
-        if ($searchQuery) {
-            $schools = School::searchSchools($searchQuery);
-        }
-        return view('schools.searchQuery', ['search' => $searchQuery]);
-    }
+//    public function search(Post $schools, Request $request)
+//    {
+//        $searchQuery = $request->input('search');
+//        if ($searchQuery) {
+//            $schools = School::searchSchools($searchQuery);
+//        }
+//        return view('schools.searchQuery', ['search' => $searchQuery]);
+//    }
 
     private function validateAndSave(Post $school, Request $request)
     {
@@ -188,6 +189,18 @@ class SchoolsController extends Controller
         $mySchool = Student::where('school_id', $id)->where('user_id', Auth::user()->id);
         $mySchool->delete();
         return redirect()->back();
+    }
+
+    public function search(Request $request){
+        $keyword = $request->input('keyword');
+        $schools = School::SearchByKeyword($keyword);
+        $schools = $schools->paginate(10);
+        return view('schools.search', ['schools' => $schools]);
+    }
+    public function school($id){
+
+        $school = School::find($id);
+        return view('schools.school', ["school" => $school]);
     }
 
 

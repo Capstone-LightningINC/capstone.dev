@@ -26,12 +26,18 @@
 						<input type="text" class="form-control" name="WeChat">
 					</div>
 				</div>
+
+
 				<div class="control-group">
 				  	<label class="control-label" for="fileInput">Photo Upload</label>
 					<div class="controls">
 						<input class="input-file uniform_on" id="fileInput" type="file" name="photo">
 					</div>
 				</div>
+
+
+
+
 				@if($studentCheck)
 					<div class="control-group">
 					  	<label class="control-label" for="typeahead">Parents Name </label>
