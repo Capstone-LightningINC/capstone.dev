@@ -72,8 +72,8 @@ class EssaysController extends Controller
      */
     public function edit($id)
     {
-        $personalInfo = personalInfo::findOrFail($id);
-        return view('EssayController@editEssay');
+        // $personalInfo = personalInfo::findOrFail($id);
+        // return view('EssayController@editEssay');
     }
 
     /**
@@ -97,7 +97,14 @@ class EssaysController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $essay = Post::find($id);
+        // if (!$essay) {
+        //     session()->flash('message', 'Essay not found');
+        // } else {
+        //     $essay->delete();
+        //     session()->flash('message', 'Essay deleted!');
+        //     return redirect()->action('');
+        // }
     }
 
     public function topics($schoolId)
@@ -121,10 +128,31 @@ class EssaysController extends Controller
         $essay->deadline = $request->deadline;
         $essay->save();
 
-        return redirect()->action("HomeController@myEssays");
+        return redirect()->action("EssaysController@myEssays");
     }
-    public function showEssays(){
+    public function showEssays()
+    {
         $essays = Essay::where('student_id', Auth::user()->id)->get();
+        return view('tasks.showEssays', ['essays' => $essays]);
+    }
+
+    public function deleteEssay($id) 
+    {
+        $essay = Essay::find($id);
+        $essay->delete();
+        return redirect()->back();
+    }
+    public function writeAnEssay()
+    {
+        return view('tasks.writeAnEssay')->with('student', Auth::user());
+    }
+    public function myEssays()
+    {
+        return view('tasks.myEssays')->with('student', Auth::user());
+    }
+
+    public function displayEssays(){
+        $essays = Essays::all();
         return view('tasks.showEssays', ['essays' => $essays]);
     }
 }

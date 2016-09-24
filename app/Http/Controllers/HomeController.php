@@ -98,9 +98,18 @@ class HomeController extends Controller
         return view('auth.editProfile', ['user' => $user]);
     }
 
-    public function activities(){
-        $activities = Activities::all();
-        return view('schools.activities', ['activities' => $activities]);
+
+    public function search(Request $request){
+        $keyword = $request->input('keyword');
+        $schools = School::SearchByKeyword($keyword);
+        $schools = $schools->paginate(10);
+        return view('schools.search', ['schools' => $schools]);
+    }
+    public function school($id){
+
+        $school = School::find($id);
+        return view('schools.school', ["school" => $school]);
+
     }
 
 
@@ -117,21 +126,11 @@ class HomeController extends Controller
     public function studentTasks(){
         return view('tasks.studentTasks');
     }
-    public function writeAnEssay(){
-        return view('tasks.writeAnEssay')->with('student', Auth::user());
-    }
-    public function myEssays(){
 
-        return view('tasks.myEssays')->with('student', Auth::user());
-    }
     public function createTasks(){
         return view('tasks.createTasks');
     }
     public function showCalendar(){
         return view('tasks.calendar');
-    }
-    public function showEssays(){
-        $essays = Essays::all();
-        return view('tasks.showEssays', ['essays' => $essays]);
     }
 }

@@ -27,9 +27,6 @@ Route::post('/save/profile', 'PersonalInfoController@validateAndSave');
 Route::post('/save/user', 'UsersController@validateAndSave');
 
 
-
-
-
 //    AUTHORIZE   //
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -37,14 +34,9 @@ Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 
-
-
 //    REGISTER   //
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-
-
 
 
 
@@ -58,27 +50,28 @@ Route::get('/showschools', 'SchoolsController@displayMySchools');
 Route::get('/deletemyschools/{id}', 'SchoolsController@deleteMySchools');
 
 
-
-
-
-
-
 //    TASKS   //
 Route::get('myStudents', 'HomeController@myStudents');
 Route::get('showStudent/{id}', 'HomeController@showStudent');
 Route::get('/counselor/studentTasks', 'HomeController@studentTasks');
-Route::get('/student/writeAnEssay', 'HomeController@writeAnEssay');
-Route::get('/students/schools/topics/{school_id}', 'EssaysController@topics');
-Route::post('/essays', 'EssaysController@store');
-Route::get('/student/myEssays', 'HomeController@myEssays');
 
-Route::get('/student/activities', 'HomeController@activities');
-Route::post('/student/activities', 'HomeController@activities');
 Route::post('/student/activities', 'HomeController@destroy');
-Route::post('/student/activities/add', 'PersonalInfoController@addToMyActivities');
-Route::get('/student/activities/delete{id}', 'PersonalInfoController@deleteMyActivities');
 Route::get('/student/calendar', 'HomeController@showCalendar');
 Route::get('/student/showEssays', 'EssaysController@showEssays');
-
-
+Route::get('/student/showEssays/delete{id}', 'EssaysController@deleteEssay');
 Route::get('/counselor/createTasks', 'HomeController@createTasks');
+
+// ESSAYS
+Route::get('/student/writeAnEssay', 'EssaysController@writeAnEssay');
+Route::get('/students/schools/topics/{school_id}', 'EssaysController@topics');
+Route::post('/essays', 'EssaysController@store');
+Route::get('/student/myEssays', 'EssaysController@myEssays');
+
+// ACTIVITIES 
+Route::get('/student/activities', 'ActivitiesController@activities');
+Route::post('/student/activities', 'ActivitiesController@activities');
+Route::post('/student/activities/add', 'ActivitiesController@addToMyActivities');
+Route::get('/student/activities/delete{id}', 'ActivitiesController@deleteMyActivities');
+
+Route::post('/student/edit/activities', 'ActivitiesController@editMyActivities');
+

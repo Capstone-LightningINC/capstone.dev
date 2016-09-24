@@ -35,7 +35,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary">Edit</button>
-                            <a type="reset" class="btn btn-danger delete" href="">Delete</a>
+                            <a type="reset" class="btn btn-danger delete" href="{{ action('EssaysController@deleteEssay', ['id' => $essay->id]) }}">Delete</a>
 
                         </fieldset>
                     </form>

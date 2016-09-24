@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Activities;
+use App\User;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
-class Activities extends Controller
+
+class ActivitiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +22,11 @@ class Activities extends Controller
         $this->middleware('auth');
         $this->middleware('student');
     }
-
+    public function activities()
+    {
+        $activities = Activities::all();
+        return view('schools.activities', ['activities' => $activities]);
+    }
     public function index()
     {
         //
@@ -43,7 +50,10 @@ class Activities extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, Post::$rules);
+        $activity = new App\Activities();
+        $activity->student_id = Auth::user()->id;
+        return $this->validateAndSave($post, $request);
     }
 
     /**
@@ -65,7 +75,9 @@ class Activities extends Controller
      */
     public function edit($id)
     {
-        //
+        $activity = Activities::findOrFail($id);
+
+        return view('ActivitiesController@activities');
     }
 
     /**
@@ -97,4 +109,52 @@ class Activities extends Controller
             return redirect()->action('');
         }
     }
+
+    public function validateAndSave(Request $request) 
+    {
+        $request->session()->flash('ERROR_MESSAGE', 'Update not saved');
+        $this->validate($request, Activities::$rules);
+        $request->session()->forget('ERROR_MESSAGE');
+
+        $activity = Auth::user()->activity;
+        $activity->name = $request->input('name');
+        $activity->position = $request->input('position');
+        $activity->type = $request->input('type');
+        $activity->description = $request->input('description');
+        $activity->save();
+
+        $request->session()->flash(
+            'SUCCESS_MESSAGE', 'Update saved');
+        return redirect()->action('ActivitiesController@activities');
+    }
+
+    public function editMyActivities() 
+    {
+        $activities = Activities::all();
+      
+        return view('schools.showActivities', ['activities' => $activities]);
+    }
+
+    public function addToMyActivities(Request $request) 
+    {
+        $myActivities = Activities::with('activity')->firstOrCreate([
+            'student_id' => Auth::user()->id,
+            'name' => $request->input('name'),
+            'position' => $request->input('position'),
+            'type' => $request->input('type'),
+            'description' => $request->input('description'),
+    ]);
+
+//        $request = $myActivities->school;
+        return redirect()->back();
+    }
+
+    public function deleteMyActivities($school_id)
+    {
+        $activity = Activities::find($school_id);
+        $activity->delete();
+        return redirect()->back();
+    }
+
+
 }
